@@ -45,6 +45,7 @@ Splitkb adds extra functionality like RGB lighting and tenting options while off
 | GPIO7/D7         | 7/E6      | 10/COL3/E6  | 10/COL1/E6   |
 | GPIO8/D8         | 8/B4      | 11/COL4/B4  | 11/COL2/B4   |
 | GPIO9/D9         | 9/B5      | 12/COL5/B5  | 12/COL3/B5   |
+| GPIO20/D20       | 20/B3     | 15/ROW4/B3  | 15/ROW0/B3   |
 | GPIO21/D21       | 21/B6     | 13/ENC1_B/B6| 13/ENCB/B6   |
 | GPIO22/D22       | 22/B1     | 16/ROW1/B1  | 16/ROW1/B1   |
 | GPIO23/D23       | 23/B2     | 14/ENC1_A/B2| 14/ENCA/B2   |
