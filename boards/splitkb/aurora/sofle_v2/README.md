@@ -36,7 +36,7 @@ Splitkb adds extra functionality like RGB lighting and tenting options while off
 | circuitpython    | uC Module | kb sch left | kb sch right | 
 | ------------     | --------- | ----------- | ------------ |
 | GPIO0/D0/TX      | 0/D3/SDA0 |             |              |
-| GPIO1/D1/RX      | 1/D2/SCL0 |             |              |
+| GPIO1/D1/RX      | 1/D2/RX0  | 2/DATA/D2   | 2/DATA/D2    |
 | GPIO2/D2/SDA     | 2/D1/SDA1 | 5/SDA/D1    | 5/SDA/D1     |
 | GPIO3/D3/SCL     | 3/D0/SCL1 | 6/SCL/D0    | 6/SCL/D0     |
 | GPIO4/D4         | 4/D4      | 7/COL0/D4   | 7/COL4/D4    |
