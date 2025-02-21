@@ -1,7 +1,7 @@
 from kb import KMKKeyboard
 
-from kmk.extensions.display import Display, TextEntry
-from kmk.extensions.display.ssd1306 import SSD1306
+# from kmk.extensions.display import Display, TextEntry
+# from kmk.extensions.display.ssd1306 import SSD1306
 from kmk.extensions.media_keys import MediaKeys
 from kmk.extensions.rgb import RGB
 from kmk.keys import KC
@@ -90,7 +90,7 @@ keyboard.keymap = [
         KC.TAB,  KC.Q,    KC.W,    KC.E,    KC.R,    KC.T,                           KC.Y,    KC.U,    KC.I,    KC.O,    KC.P,    KC.MINS,
         KC.LCTL, KC.A,    KC.S,    KC.D,    KC.F,    KC.G,                           KC.H,    KC.J,    KC.K,    KC.L,    KC.SCLN, KC.QUOT,
         KC.LSFT, KC.Z,    KC.X,    KC.C,    KC.V,    KC.B,    KC.LBRC,      KC.RBRC, KC.N,    KC.M,    KC.COMM, KC.DOT,  KC.SLSH, KC.RSFT,
-                                   KC.LGUI, KC.LALT, ENTER,   LOWER,        BSPC,    KC.SPC,  KC.LALT, ADJUST,
+                                   KC.LGUI, KC.LALT, KC.LCTL,   LOWER,ENTER,        BSPC,    KC.SPC,  KC.LALT, ADJUST,
     ],
     [   #LOWER
         XXXXXXX, KC.F1,   KC.F2,   KC.F3,   KC.F4,   KC.F5,                          KC.F6,   KC.F7,   KC.F8,   KC.F9,   KC.F10,  KC.F11,
