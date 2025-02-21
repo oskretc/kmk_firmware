@@ -1,4 +1,3 @@
-![Aurora Sofle V2 rev1](https://i.imgur.com/PNRXfCUh.jpg)
 
 # Aurora Sofle V2 rev1
 The Aurora Sofle v2 is a redesign by splitkb.com of the popular Sofle v2 keyboard by Josef Adamčík.
