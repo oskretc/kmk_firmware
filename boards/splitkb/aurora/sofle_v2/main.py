@@ -86,9 +86,10 @@ display = Display(
         TextEntry(text='4', x=48, y=4, inverted=True, layer=4),
     ],
     dim_time=10,
-    dim_target=0.2,
+    dim_target=0.1,
     off_time=1200,
     brightness=1,
+    flip_right=True
 )
 keyboard.extensions = [leds,rgb, display, MediaKeys()]
 
