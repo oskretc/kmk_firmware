@@ -28,16 +28,29 @@ class KMKKeyboard(_KMKKeyboard):
         )
         self.diode_orientation = DiodeOrientation.COL2ROW
         self.data_pin = board.D1
-        self.rgb_pixel_pin = board.NEOPIXEL
+        self.rgb_pixel_pin = board.D0
         self.SCL = board.SCL
         self.SDA = board.SDA
+        self.power_led = board.POWER_LED
 
         # fmt:off
         self.coord_mapping = [
              27,  26, 25, 24, 29, 28,           56, 57, 58, 59, 54, 55,
-             9,  8, 7, 6, 11, 10,           38, 39, 40, 41, 36, 37,
+              9,   8,  7,  6, 11, 10,           38, 39, 40, 41, 36, 37,
              15,  14, 13, 12, 17, 16,           44, 45, 46, 47, 42, 43,
-             21,  20, 19, 18, 23, 22,  9,   50, 51, 52, 53, 48, 49,
-                        3, 2, 1, 0, 5,    33, 34, 35, 30,31
+             21,  20, 19, 18, 23, 22,           50, 51, 52, 53, 48, 49,
+                       3,  2,  1, 0,  5,    33, 34, 35, 30,31
         ]
+        self.led_key_pos = [
+            11,10,9 ,8 ,7 ,6 ,       41,42,43,44,45,46,
+            12,13,14,15,16,17,       52,51,50,49,48,47,
+            23,22,21,20,19,18,       53,54,55,56,57,58,
+            24,25,26,27,28,29,30, 65,64,63,62,61,60,59,
+                     34,33,32,31, 66,67,68,69,
+                     3 ,4 ,5 ,       40,39,38,
+                     2 ,1 ,0 ,       35,36,37
+        ]
+        self.brightness_limit = 1.0
+        self.num_pixels = 35
+
         # fmt:on
