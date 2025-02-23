@@ -7,7 +7,7 @@ from kmk.extensions.rgb import RGB
 from kmk.keys import KC
 from kmk.modules.holdtap import HoldTap
 from kmk.modules.layers import Layers
-from kmk.modules.split import Split
+from kmk.modules.split import Split,SplitType
 from kmk.extensions.peg_rgb_matrix import Rgb_matrix,Rgb_matrix_data,Color
 from kmk.extensions.lock_status import LockStatus
 from kmk.extensions.LED import LED
@@ -17,8 +17,10 @@ keyboard = KMKKeyboard()
 # Adding modules
 # Using drive names (LILY58L, LILY58R) to recognize sides; use split_side arg if you're not doing it
 split = Split(
-    # split_target_left=True,
+    split_target_left=True,
+    split_type=SplitType.UART,
     split_flip=False,
+    # data_pin=keyboard.data_pin,
     use_pio=True,
 )
 combo_layers = {(1, 2): 3}
@@ -103,7 +105,8 @@ LOWER = KC.MO(1)
 # BSPC = KC.LT(2, KC.BSPC)
 BSPC = KC.BSPC
 UPPER = KC.MO(2)
-ADJUST = KC.MO(3)
+# ADJUST = KC.MO(3)
+ADJUST = KC.LT(3, KC.RSFT)
 I3GUI = KC.LT(4, KC.LGUI)
 
 # Symbols
@@ -144,36 +147,37 @@ keyboard.keymap = [
         KC.ESC,  KC.N1,   KC.N2,   KC.N3,   KC.N4,   KC.N5,                          KC.N6,   KC.N7,   KC.N8,   KC.N9,   KC.N0,   BSPC,
         KC.TAB,  KC.Q,    KC.W,    KC.E,    KC.R,    KC.T,                           KC.Y,    KC.U,    KC.I,    KC.O,    KC.P,    KC.DEL,
         KC.LSFT, KC.A,    KC.S,    KC.D,    KC.F,    KC.G,                           KC.H,    KC.J,    KC.K,    KC.L,    KC.SCLN, KC.QUOT,
-        KC.LCTL, KC.Z,    KC.X,    KC.C,    KC.V,    KC.B,                           KC.N,    KC.M,    KC.COMM, KC.DOT,  KC.SLSH, KC.RSFT,
-                                   KC.LGUI, KC.LALT, I3GUI,LOWER,ENTER,  KC.SPC, UPPER,    KC.RCTL,  KC.RALT, ADJUST,
+        KC.LCTL, KC.Z,    KC.X,    KC.C,    KC.V,    KC.B,                           KC.N,    KC.M,    KC.COMM, KC.DOT,  KC.SLSH, ADJUST,
+                          KC.LGUI, KC.LALT, I3GUI  , LOWER  , ENTER  ,      KC.SPC , UPPER  , KC.RCTL, KC.RALT, KC.UNDS,
+
     ],
     [   #LOWER
         XXXXXXX, KC.F1,   KC.F2,   KC.F3,   KC.F4,   KC.F5,                          KC.F6,   KC.F7,   KC.F8,   KC.F9,   KC.F10,  KC.F11,
-        XXXXXXX, XXXXXXX, EUR,     LPAR,    RPAR,    KC.PLUS,                        XXXXXXX, KC.KP_7, KC.KP_8, KC.KP_9, XXXXXXX, KC.F12,
-        _______, XXXXXXX, XXXXXXX, KC.LBRC, KC.RBRC, KC.EQL,                         XXXXXXX, KC.KP_4, KC.KP_5, KC.KP_6, XXXXXXX, XXXXXXX,
-        _______, KC.L   , XXXXXXX, LGT,     RGT,     PIPE,                           KC.KP_0, KC.KP_1, KC.KP_2, KC.KP_3, KC.BSLS, XXXXXXX,
-                                   _______, _______, _______, _______,      _______, _______, _______, _______,
+        XXXXXXX, XXXXXXX, EUR,     LPAR,    RPAR,    KC.PLUS,                        XXXXXXX, KC.UNDS, XXXXXXX, XXXXXXX, XXXXXXX, KC.F12,
+        _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC.EQL,                         LPAR   , RPAR   , XXXXXXX, XXXXXXX, XXXXXXX, KC.PIPE,
+        _______, KC.EQL , KC.MINS, KC.PLUS, KC.LCBR, KC.RCBR,                        KC.LBRC, KC.RBRC, XXXXXXX, XXXXXXX, KC.BSLS, XXXXXXX,
+                          _______, _______, _______, _______, _______,      _______, _______, _______, _______,_______,
     ],
     [   #UPPER
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        MENU,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        KC.VOLU, KC.HOME, KC.UP,   KC.END,  KC.PGUP, XXXXXXX,
         _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        KC.VOLD, KC.LEFT, KC.DOWN, KC.RGHT, KC.PGDN, XXXXXXX,
-        _______, KC.U   , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        KC.MPLY, KC.INS,  KC.DEL,  XXXXXXX, XXXXXXX, XXXXXXX,
-                                   _______, _______, _______, _______,      _______, _______, _______, _______,
+        _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        KC.MPLY, KC.INS,  KC.DEL,  XXXXXXX, XXXXXXX, XXXXXXX,
+                          _______, _______, _______, _______, _______,      _______, _______, _______, _______,_______,
     ],
     [   #ADJUST
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        RGB1,    RGB2,    RGB3,    RGB4,    RGB5,    RGB6,
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, PWRLEDTOG ,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, PWRLEDTOG,
         _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RGBTOG,
-                                   _______, _______, _______, _______,      _______, _______, _______, _______,
+        _______, XXXXXXX, RGBTOG , XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+                          _______, _______, _______, _______, _______,      _______, _______, _______, _______,_______,
     ],
     [   #I3
         XXXXXXX, FO1    , FO2    , FO3    , FO4    , FO5    ,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, KC.UP, XXXXXXX, XXXXXXX, XXXXXXX,
-        _______, XXXXXXX, XXXXXXX, SWTDES, XXXXXXX, XXXXXXX,                           XXXXXXX, FOLFT, KC.DOWN, FORGH , XXXXXXX, XXXXXXX,
-        _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RGBTOG,
-                                   _______, _______, KC.LGUI, _______,      _______, _______, _______, _______,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, KC.UP  , XXXXXXX, XXXXXXX, XXXXXXX,
+        _______, XXXXXXX, XXXXXXX, SWTDES , XXXXXXX, XXXXXXX,                        XXXXXXX, FOLFT  , KC.DOWN, FORGH  , XXXXXXX, XXXXXXX,
+        _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+                          _______, _______, _______, _______, _______,      _______, _______, _______, _______,_______,
     ]
 ]
 # fmt:on
