@@ -32,6 +32,8 @@ class KMKKeyboard(_KMKKeyboard):
         self.SCL = board.SCL
         self.SDA = board.SDA
         self.power_led = board.POWER_LED
+        self.side = side
+        
 
         # fmt:off
         self.coord_mapping = [

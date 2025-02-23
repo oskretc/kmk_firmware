@@ -7,17 +7,19 @@ from kmk.extensions.rgb import RGB
 from kmk.keys import KC
 from kmk.modules.holdtap import HoldTap
 from kmk.modules.layers import Layers
-from kmk.modules.split import Split,SplitType
+from kmk.modules.split import Split,SplitType,SplitSide
 from kmk.extensions.peg_rgb_matrix import Rgb_matrix,Rgb_matrix_data,Color
 from kmk.extensions.lock_status import LockStatus
 from kmk.extensions.LED import LED
+from kmk.modules.pimoroni_trackball import Trackball, TrackballMode
+import busio as io
 
 keyboard = KMKKeyboard()
 
 # Adding modules
 # Using drive names (LILY58L, LILY58R) to recognize sides; use split_side arg if you're not doing it
 split = Split(
-    split_target_left=True,
+    split_target_left=False,
     split_type=SplitType.UART,
     split_flip=False,
     # data_pin=keyboard.data_pin,
@@ -70,9 +72,21 @@ rgb = RGB(
 #     disable_auto_write=True)
 
 # keyboard.extensions.append(rgb)
+#
+#
 
+i2c_bus = io.I2C(sda=keyboard.SDA, scl=keyboard.SCL)
+display_driver = SSD1306(
+    i2c=i2c_bus,
+    # Optional device_addres argument. Default is 0x3C.
+    # device_address=0x3C,
+)    
+
+# if keyboard.side==SplitSide.LEFT:
 display = Display(
-    display=SSD1306(sda=keyboard.SDA, scl=keyboard.SCL),
+    # display=SSD1306(sda=keyboard.SDA, scl=keyboard.SCL),
+    display=display_driver,
+
     entries=[
         TextEntry(text='Layer: ', x=0, y=32, y_anchor='B'),
         TextEntry(text='BASE', x=40, y=32, y_anchor='B', layer=0),
@@ -93,7 +107,16 @@ display = Display(
     brightness=1,
     flip_right=True
 )
+
 keyboard.extensions = [leds,rgb, display, MediaKeys()]
+# else:
+    # keyboard.extensions = [leds,rgb,  MediaKeys()]
+
+if keyboard.side==SplitSide.RIGHT:
+    # i2c = io.I2C(sda=keyboard.SDA, scl=keyboard.SCL)
+    trackball = Trackball(i2c_bus, angle_offset=270)
+    trackball.set_red(50)
+    keyboard.modules.append(trackball)
 
 
 # Cleaner key names
@@ -147,13 +170,14 @@ keyboard.keymap = [
         KC.ESC,  KC.N1,   KC.N2,   KC.N3,   KC.N4,   KC.N5,                          KC.N6,   KC.N7,   KC.N8,   KC.N9,   KC.N0,   BSPC,
         KC.TAB,  KC.Q,    KC.W,    KC.E,    KC.R,    KC.T,                           KC.Y,    KC.U,    KC.I,    KC.O,    KC.P,    KC.DEL,
         KC.LSFT, KC.A,    KC.S,    KC.D,    KC.F,    KC.G,                           KC.H,    KC.J,    KC.K,    KC.L,    KC.SCLN, KC.QUOT,
-        KC.LCTL, KC.Z,    KC.X,    KC.C,    KC.V,    KC.B,                           KC.N,    KC.M,    KC.COMM, KC.DOT,  KC.SLSH, ADJUST,
+        KC.LCTL, KC.Z,    KC.X,    KC.C,    KC.V,    KC.B,
+        KC.N,    KC.M,    KC.COMM, KC.DOT,  KC.SLSH, ADJUST,
                           KC.LGUI, KC.LALT, I3GUI  , LOWER  , ENTER  ,      KC.SPC , UPPER  , KC.RCTL, KC.RALT, KC.UNDS,
 
     ],
     [   #LOWER
         XXXXXXX, KC.F1,   KC.F2,   KC.F3,   KC.F4,   KC.F5,                          KC.F6,   KC.F7,   KC.F8,   KC.F9,   KC.F10,  KC.F11,
-        XXXXXXX, XXXXXXX, EUR,     LPAR,    RPAR,    KC.PLUS,                        XXXXXXX, KC.UNDS, XXXXXXX, XXXXXXX, XXXXXXX, KC.F12,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC.PLUS,                        XXXXXXX, KC.UNDS, XXXXXXX, XXXXXXX, XXXXXXX, KC.F12,
         _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC.EQL,                         LPAR   , RPAR   , XXXXXXX, XXXXXXX, XXXXXXX, KC.PIPE,
         _______, KC.EQL , KC.MINS, KC.PLUS, KC.LCBR, KC.RCBR,                        KC.LBRC, KC.RBRC, XXXXXXX, XXXXXXX, KC.BSLS, XXXXXXX,
                           _______, _______, _______, _______, _______,      _______, _______, _______, _______,_______,
