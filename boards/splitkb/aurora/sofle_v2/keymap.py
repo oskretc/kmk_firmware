@@ -65,6 +65,11 @@ else:
     M_POINT=XXXXXXX
     M_SCROL=XXXXXXX
     M_LMB = XXXXXXX
+
+import secrets as secrets
+
+P1 = KC.MACRO(secrets.P1)
+P2 = KC.MACRO(secrets.P2)
 # fmt:off
 KEYMAP = [
     [  #QWERTY
@@ -83,8 +88,8 @@ KEYMAP = [
                           _______, _______, _______, _______, _______,      _______, _______, _______, _______,_______,
     ],
     [   #UPPER
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        MENU,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, XXXXXXX, ZEUP   , XXXXXXX, XXXXXXX, XXXXXXX,                        KC.VOLU, KC.HOME, KC.UP,   KC.END,  KC.PGUP, XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        MENU,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, P1,
+        XXXXXXX, XXXXXXX, ZEUP   , XXXXXXX, XXXXXXX, XXXXXXX,                        KC.VOLU, KC.HOME, KC.UP,   KC.END,  KC.PGUP, P2,
         _______, ZELF   , ZEDN   , ZERT   , XXXXXXX, XXXXXXX,                        KC.VOLD, KC.LEFT, KC.DOWN, KC.RGHT, KC.PGDN, XXXXXXX,
         _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        KC.MPLY, KC.INS,  KC.DEL,  XXXXXXX, XXXXXXX, XXXXXXX,
                           _______, _______, _______, _______, _______,      _______, _______, _______, _______,_______,

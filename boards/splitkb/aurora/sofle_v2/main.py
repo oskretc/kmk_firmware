@@ -105,6 +105,12 @@ mousekeys = MouseKeys(
 
 keyboard.modules.append(mousekeys)
 
+from kmk.modules.macros import Macros
+
+macros = Macros()
+keyboard.modules.append(macros)
+
+
 
 import keymap as keymap
 
