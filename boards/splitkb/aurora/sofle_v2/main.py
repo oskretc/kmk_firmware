@@ -24,7 +24,7 @@ split = Split(
     # data_pin=keyboard.data_pin,
     use_pio=True,
 )
-combo_layers = {(1, 2): 3}
+combo_layers = {(2, 1): 3}
 layers = Layers(combo_layers)
 keyboard.modules = [split, layers, HoldTap()]
 
@@ -41,8 +41,6 @@ leds = LED(
 # Adding extensions
 # **RGB requires neopixel.py library to work**
 #
-
-
 rgb = RGB(
     pixel_pin=keyboard.rgb_pixel_pin,
     num_pixels=35,
@@ -50,29 +48,6 @@ rgb = RGB(
     sat_default=255,
     val_default=4
 )
-#
-#
-#
-
-
-# rgb = Rgb_matrix(ledDisplay=Rgb_matrix_data(
-#     keys=[
-#     [255,55,55],[55,55,55],[55,55,55],[55,55,55],[55,55,55],[55,55,55],                        [55,55,55],[55,55,55],[55,55,55],[55,55,55],[55,55,55],[255,55,55],
-#     [255,55,55],[55,55,55],[55,55,55],[55,55,55],[55,55,55],[55,55,55],                        [55,55,55],[55,55,55],[55,55,55],[55,55,55],[55,55,55],[255,55,55],
-#     [255,55,55],[55,55,55],[55,55,55],[55,55,55],[55,55,55],[55,55,55],                        [55,55,55],[55,55,55],[55,55,55],[55,55,55],[55,55,55],[255,55,55],
-#     [255,55,55],[55,55,55],[55,55,55],[55,55,55],[55,55,55],[55,55,55],[255,55,55],[255,55,55],[55,55,55],[55,55,55],[55,55,55],[55,55,55],[55,55,55],[255,55,55],
-#                                      [255,55,55],[55,55,55],[55,55,55],[255,55,55],[255,55,55],[55,55,55],[55,55,55],[255,55,55]],
-                                    
-#     underglow=[ 
-#              [0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55]]
-#              ),
-#     split=True,
-#     rightSide=True,
-#     disable_auto_write=True)
-
-# keyboard.extensions.append(rgb)
-#
-#
 
 i2c_bus = io.I2C(sda=keyboard.SDA, scl=keyboard.SCL)
 display_driver = SSD1306(
@@ -81,11 +56,8 @@ display_driver = SSD1306(
     # device_address=0x3C,
 )    
 
-# if keyboard.side==SplitSide.LEFT:
 display = Display(
-    # display=SSD1306(sda=keyboard.SDA, scl=keyboard.SCL),
     display=display_driver,
-
     entries=[
         TextEntry(text='Layer: ', x=0, y=32, y_anchor='B'),
         TextEntry(text='BASE', x=40, y=32, y_anchor='B', layer=0),
@@ -108,11 +80,8 @@ display = Display(
 )
 
 keyboard.extensions = [leds,rgb, display, MediaKeys()]
-# else:
-    # keyboard.extensions = [leds,rgb,  MediaKeys()]
 
 if keyboard.side==SplitSide.RIGHT:
-    # i2c = io.I2C(sda=keyboard.SDA, scl=keyboard.SCL)
     trackball = Trackball(
         i2c_bus,
         angle_offset=270,
@@ -179,8 +148,7 @@ keyboard.keymap = [
         KC.ESC,  KC.N1,   KC.N2,   KC.N3,   KC.N4,   KC.N5,                          KC.N6,   KC.N7,   KC.N8,   KC.N9,   KC.N0,   BSPC,
         KC.TAB,  KC.Q,    KC.W,    KC.E,    KC.R,    KC.T,                           KC.Y,    KC.U,    KC.I,    KC.O,    KC.P,    KC.DEL,
         KC.LSFT, KC.A,    KC.S,    KC.D,    KC.F,    KC.G,                           KC.H,    KC.J,    KC.K,    KC.L,    KC.SCLN, KC.QUOT,
-        KC.LCTL, KC.Z,    KC.X,    KC.C,    KC.V,    KC.B,
-        KC.N,    KC.M,    KC.COMM, KC.DOT,  KC.SLSH, ADJUST,
+        KC.LCTL, KC.Z,    KC.X,    KC.C,    KC.V,    KC.B,                           KC.N,    KC.M,    KC.COMM, KC.DOT,  KC.SLSH, ADJUST,
                           KC.LGUI, KC.LALT, I3GUI  , LOWER  , ENTER  ,      KC.SPC , UPPER  , KC.RCTL, KC.RALT, KC.UNDS,
 
     ],
