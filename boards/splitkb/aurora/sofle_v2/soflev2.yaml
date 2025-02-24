@@ -1,8 +1,8 @@
 layout: { qmk_keyboard: splitkb/aurora/sofle_v2/rev1, layout_name: LAYOUT }
 draw_config:
   dark_mode: false
-  key_w: 50.0
-  key_h: 46.0
+  key_w: 60.0
+  key_h: 56.0
   split_gap: 10.0
 
 layers:
