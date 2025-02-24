@@ -4,7 +4,7 @@ draw_config:
   key_w: 60.0
   key_h: 56.0
   split_gap: 10.0
-  svg_extra_style: "text.label {stroke-width: 1;}"
+  svg_extra_style: "text.label {stroke-width: 1; font-size: 18px;}"
 layers:
   L0:
     # prettier-ignore
