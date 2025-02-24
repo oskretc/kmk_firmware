@@ -10,7 +10,7 @@ from kmk.modules.layers import Layers
 from kmk.modules.split import Split,SplitType,SplitSide
 # from kmk.extensions.peg_rgb_matrix import Rgb_matrix,Rgb_matrix_data,Color
 from kmk.extensions.LED import LED
-from kmk.modules.pimoroni_trackball import Trackball, TrackballMode,ScrollDirection,ScrollHandler, PointingHandler
+from kmk.modules.pimoroni_trackball import Trackball, TrackballMode,ScrollDirection,ScrollHandler, PointingHandler, KeyHandler
 import busio as io
 
 keyboard = KMKKeyboard()
@@ -116,14 +116,15 @@ if keyboard.side==SplitSide.RIGHT:
     trackball = Trackball(
         i2c_bus,
         angle_offset=270,
-        mode=TrackballMode.MOUSE_MODE,
+        mode=TrackballMode.SCROLL_MODE,
         handlers=[
+            KeyHandler(KC.UP, KC.RIGHT, KC.DOWN, KC.LEFT, KC.ENTER),
             PointingHandler(),
             # use ScrollDirection.NATURAL (default) or REVERSE to change the scrolling direction, left click when pressed
-            ScrollHandler(scroll_direction=ScrollDirection.NATURAL, on_press=KC.MB_LMB)
+            ScrollHandler(scroll_direction=ScrollDirection.REVERSE, on_press=KC.MB_LMB)
         ]
     )
-    trackball.set_red(50)
+    trackball.set_blue(50)
     keyboard.modules.append(trackball)
 
 
@@ -199,7 +200,7 @@ keyboard.keymap = [
     ],
     [   #ADJUST
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        RGB1,    RGB2,    RGB3,    RGB4,    RGB5,    RGB6,
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, PWRLEDTOG,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC.TB_NEXT_HANDLER, PWRLEDTOG,
         _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RGBTOG,
         _______, XXXXXXX, RGBTOG , XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                           _______, _______, _______, _______, _______,      _______, _______, _______, _______,_______,
