@@ -8,10 +8,9 @@ from kmk.keys import KC
 from kmk.modules.holdtap import HoldTap
 from kmk.modules.layers import Layers
 from kmk.modules.split import Split,SplitType,SplitSide
-from kmk.extensions.peg_rgb_matrix import Rgb_matrix,Rgb_matrix_data,Color
-from kmk.extensions.lock_status import LockStatus
+# from kmk.extensions.peg_rgb_matrix import Rgb_matrix,Rgb_matrix_data,Color
 from kmk.extensions.LED import LED
-from kmk.modules.pimoroni_trackball import Trackball, TrackballMode
+from kmk.modules.pimoroni_trackball import Trackball, TrackballMode,ScrollDirection,ScrollHandler, PointingHandler
 import busio as io
 
 keyboard = KMKKeyboard()
@@ -49,7 +48,7 @@ rgb = RGB(
     num_pixels=35,
     hue_default=128,
     sat_default=255,
-    val_default=04,
+    val_default=4
 )
 #
 #
@@ -114,7 +113,16 @@ keyboard.extensions = [leds,rgb, display, MediaKeys()]
 
 if keyboard.side==SplitSide.RIGHT:
     # i2c = io.I2C(sda=keyboard.SDA, scl=keyboard.SCL)
-    trackball = Trackball(i2c_bus, angle_offset=270)
+    trackball = Trackball(
+        i2c_bus,
+        angle_offset=270,
+        mode=TrackballMode.MOUSE_MODE,
+        handlers=[
+            PointingHandler(),
+            # use ScrollDirection.NATURAL (default) or REVERSE to change the scrolling direction, left click when pressed
+            ScrollHandler(scroll_direction=ScrollDirection.NATURAL, on_press=KC.MB_LMB)
+        ]
+    )
     trackball.set_red(50)
     keyboard.modules.append(trackball)
 
