@@ -1,5 +1,4 @@
 from kmk.keys import KC
-from kmk.modules.mouse_keys import MouseKeys
 
 from kmk.modules.split import SplitSide
 from storage import getmount
