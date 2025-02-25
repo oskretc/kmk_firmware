@@ -57,6 +57,8 @@ FO2 = KC.LGUI(KC.N2)
 FO3 = KC.LGUI(KC.N3)
 FO4 = KC.LGUI(KC.N4)
 FO5 = KC.LGUI(KC.N5)
+MWSL= KC.LGUI(KC.LSFT(KC.A))
+MWSR= KC.LGUI(KC.LSFT(KC.F))
 
 if side==SplitSide.RIGHT:
     M_KEYS=KC.TB_HANDLER(0)
@@ -94,7 +96,7 @@ KEYMAP = [
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        MENU,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, P1,
         XXXXXXX, XXXXXXX, ZEUP   , XXXXXXX, XXXXXXX, XXXXXXX,                        KC.VOLU, KC.HOME, XXXXXXX,   KC.END,  KC.PGUP, P2,
         _______, ZELF   , ZEDN   , ZERT   , XXXXXXX, XXXXXXX,                        KC.LEFT, KC.DOWN, KC.UP, KC.RGHT, KC.PGDN, XXXXXXX,
-        _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        KC.MPLY, KC.INS,  KC.DEL,  XXXXXXX, XXXXXXX, XXXXXXX,
+        _______, XXXXXXX, XXXXXXX, XXXXXXX, MWSL   , MWSR   ,                        KC.MPLY, KC.INS,  KC.DEL,  XXXXXXX, XXXXXXX, XXXXXXX,
                           _______, _______, _______, _______, _______,      _______, _______, _______, _______,_______,
     ],
     [   #ADJUST
@@ -108,7 +110,7 @@ KEYMAP = [
         XXXXXXX, FO1    , FO2    , FO3    , FO4    , FO5    ,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         _______, XXXXXXX, XXXXXXX, SWTDES , XXXXXXX, XXXXXXX,                        FOLFT  , FODN   , FOUP   , FORGH  , XXXXXXX, XXXXXXX,
-        _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                          _______, _______, _______, _______, _______,      _______, _______, _______, _______,_______,
+        _______, XXXXXXX, XXXXXXX, XXXXXXX, MWSL   , MWSR   ,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+                          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,XXXXXXX,
     ]
 ]
