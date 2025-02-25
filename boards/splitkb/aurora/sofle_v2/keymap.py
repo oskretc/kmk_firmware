@@ -49,12 +49,15 @@ ZERT =KC.LCTL(KC.RIGHT)
 # I3
 FOLFT = KC.LGUI(KC.LEFT)
 FORGH = KC.LGUI(KC.RIGHT)
+FOUP = KC.LGUI(KC.UP)
+FODN = KC.LGUI(KC.DOWN)
 SWTDES = KC.LGUI(KC.D)
 FO1 = KC.LGUI(KC.N1)
 FO2 = KC.LGUI(KC.N2)
 FO3 = KC.LGUI(KC.N3)
 FO4 = KC.LGUI(KC.N4)
 FO5 = KC.LGUI(KC.N5)
+
 if side==SplitSide.RIGHT:
     M_KEYS=KC.TB_HANDLER(0)
     M_POINT=KC.TB_HANDLER(1)
@@ -82,15 +85,15 @@ KEYMAP = [
     ],
     [   #LOWER
         XXXXXXX, KC.F1,   KC.F2,   KC.F3,   KC.F4,   KC.F5,                          KC.F6,   KC.F7,   KC.F8,   KC.F9,   KC.F10,  KC.F11,
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC.PLUS,                        M_LMB  , KC.UNDS, XXXXXXX, XXXXXXX, XXXXXXX, KC.F12,
-        _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC.EQL,                         LPAR   , RPAR   , XXXXXXX, XXXXXXX, XXXXXXX, KC.PIPE,
+        XXXXXXX, KC.TILDE, KC.GRV, XXXXXXX, KC.MINS, KC.PLUS,                        M_LMB  , KC.UNDS, XXXXXXX, XXXXXXX, XXXXXXX, KC.F12,
+        _______, KC.AT  , XXXXXXX, XXXXXXX, XXXXXXX, KC.EQL,                         LPAR   , RPAR   , XXXXXXX, XXXXXXX, XXXXXXX, KC.PIPE,
         _______, KC.EQL , KC.MINS, KC.PLUS, KC.LCBR, KC.RCBR,                        KC.LBRC, KC.RBRC, XXXXXXX, XXXXXXX, KC.BSLS, XXXXXXX,
                           _______, _______, _______, _______, _______,      _______, _______, _______, _______,_______,
     ],
     [   #UPPER
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        MENU,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, P1,
-        XXXXXXX, XXXXXXX, ZEUP   , XXXXXXX, XXXXXXX, XXXXXXX,                        KC.VOLU, KC.HOME, KC.UP,   KC.END,  KC.PGUP, P2,
-        _______, ZELF   , ZEDN   , ZERT   , XXXXXXX, XXXXXXX,                        KC.VOLD, KC.LEFT, KC.DOWN, KC.RGHT, KC.PGDN, XXXXXXX,
+        XXXXXXX, XXXXXXX, ZEUP   , XXXXXXX, XXXXXXX, XXXXXXX,                        KC.VOLU, KC.HOME, XXXXXXX,   KC.END,  KC.PGUP, P2,
+        _______, ZELF   , ZEDN   , ZERT   , XXXXXXX, XXXXXXX,                        KC.LEFT, KC.DOWN, KC.UP, KC.RGHT, KC.PGDN, XXXXXXX,
         _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        KC.MPLY, KC.INS,  KC.DEL,  XXXXXXX, XXXXXXX, XXXXXXX,
                           _______, _______, _______, _______, _______,      _______, _______, _______, _______,_______,
     ],
@@ -103,8 +106,8 @@ KEYMAP = [
     ],
     [   #I3
         XXXXXXX, FO1    , FO2    , FO3    , FO4    , FO5    ,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, KC.UP  , XXXXXXX, XXXXXXX, XXXXXXX,
-        _______, XXXXXXX, XXXXXXX, SWTDES , XXXXXXX, XXXXXXX,                        XXXXXXX, FOLFT  , KC.DOWN, FORGH  , XXXXXXX, XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        _______, XXXXXXX, XXXXXXX, SWTDES , XXXXXXX, XXXXXXX,                        FOLFT  , FODN   , FOUP   , FORGH  , XXXXXXX, XXXXXXX,
         _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                           _______, _______, _______, _______, _______,      _______, _______, _______, _______,_______,
     ]
