@@ -9,6 +9,7 @@ _______ = KC.TRNS
 XXXXXXX = KC.NO
 
 ENTER = KC.HT(KC.ENT, KC.LCTRL)
+SPACE = KC.HT(KC.SPC, KC.RSFT)
 LOWER = KC.MO(1)
 # BSPC = KC.LT(2, KC.BSPC)
 BSPC = KC.BSPC
@@ -80,14 +81,14 @@ KEYMAP = [
         KC.TAB , KC.Q,    KC.W,    KC.E,    KC.R,    KC.T,                           KC.Y,    KC.U,    KC.I,    KC.O,    KC.P,    KC.DEL,
         KC.LSFT, KC.A,    KC.S,    KC.D,    KC.F,    KC.G,                           KC.H,    KC.J,    KC.K,    KC.L,    KC.SCLN, ADJR,
         KC.LCTL, KC.Z,    KC.X,    KC.C,    KC.V,    KC.B,                           KC.N,    KC.M,    KC.COMM, KC.DOT,  KC.SLSH, KC.RSFT,
-                          KC.LGUI, KC.LALT, I3GUI  , LOWER  , ENTER  ,      KC.SPC , UPPER  , KC.RCTL, KC.RALT, KC.UNDS,
+                          KC.LGUI, KC.LALT, I3GUI  , LOWER  , ENTER  ,      SPACE , UPPER  , KC.RCTL, KC.RALT, KC.RGUI,
 
     ],
     [   #LOWER
         XXXXXXX, KC.F1,   KC.F2,   KC.F3,   KC.F4,   KC.F5,                          KC.F6,   KC.F7,   KC.F8,   KC.F9,   KC.F10,  KC.F11,
-        XXXXXXX, KC.TILDE, KC.GRV, XXXXXXX, KC.MINS, KC.PLUS,                        M_LMB  , KC.UNDS, XXXXXXX, XXXXXXX, XXXXXXX, KC.F12,
+        XXXXXXX, KC.TILDE, KC.GRV, XXXXXXX, KC.PLUS, KC.MINS,                        M_LMB  , KC.UNDS, XXXXXXX, XXXXXXX, XXXXXXX, KC.F12,
         _______, KC.AT  , XXXXXXX, XXXXXXX, XXXXXXX, KC.EQL,                         LPAR   , RPAR   , XXXXXXX, XXXXXXX, XXXXXXX, KC.PIPE,
-        _______, KC.EQL , KC.MINS, KC.PLUS, KC.LCBR, KC.RCBR,                        KC.LBRC, KC.RBRC, XXXXXXX, XXXXXXX, KC.BSLS, XXXXXXX,
+        _______, XXXXXXX, XXXXXXX, XXXXXXX, KC.LCBR, KC.RCBR,                        KC.LBRC, KC.RBRC, XXXXXXX, XXXXXXX, KC.BSLS, XXXXXXX,
                           _______, _______, _______, _______, _______,      _______, _______, _______, _______,_______,
     ],
     [   #UPPER
