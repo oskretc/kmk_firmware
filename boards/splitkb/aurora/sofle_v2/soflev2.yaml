@@ -33,10 +33,10 @@ layers:
       ]
   RAISE:
     # prettier-ignore
-    - ["", "", "", "", "", "", "", "", "", "", "", ""]
-    - [ "", "", "ZEUP", "", "", "", "", "HOME", "", "END", "PGUP", "", ]
+    - ["", "WS 1", "WS 2", "WS 3", "WS 4", "WS 5", "", "", "", "", "", ""]
+    - [ "", "", "ZEUP", "", "TAB LEFT", "TAB RIGHT", "", "HOME", "", "END", "PGUP", "", ]
     - [ "", "ZELF", "ZEDN", "ZERT", "", "", "$$mdil:arrow-left$$", "$$mdil:arrow-down$$", "$$mdil:arrow-up$$", "$$mdil:arrow-right$$", "PGDN", "", ]
-    - ["", "", "", "", "WIN+ SFT+ A", "WIN+ SFT+ F", "", "", "", "", "", ""]
+    - ["", "", "", "", "WS LEFT", "WS RIGHT", "", "", "", "", "", ""]
     - [
         { t: ▽, type: trans },
         { t: ▽, type: trans },
@@ -84,7 +84,7 @@ layers:
     - ["", "1", "2", "3", "4", "5", "", "", "", "", "", ""]
     - ["", "", "", "", "", "", "", "", "", "", "", ""]
     - ["", "", "", "D", "", "", "$$mdil:arrow-left$$", "$$mdil:arrow-down$$", "$$mdil:arrow-up$$", "$$mdil:arrow-right$$", "", ""]
-    - ["", "", "", "", "WIN+ SFT+ A", "WIN+ SFT+ F", "", "", "", "", "", ""]
+    - ["", "", "", "", "WS LEFT", "WS RIGHT", "", "", "", "", "", ""]
     - [
         { t: ▽, type: trans },
         { t: ▽, type: trans },
