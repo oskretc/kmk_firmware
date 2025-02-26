@@ -60,6 +60,8 @@ FO5 = KC.LGUI(KC.N5)
 MWSL= KC.LGUI(KC.LSFT(KC.A))
 MWSR= KC.LGUI(KC.LSFT(KC.F))
 
+LAUNC=KC.RALT(KC.SPC)
+
 if side==SplitSide.RIGHT:
     M_KEYS=KC.TB_HANDLER(0)
     M_POINT=KC.TB_HANDLER(1)
@@ -90,7 +92,7 @@ KEYMAP = [
         XXXXXXX, KC.TILDE, KC.GRV, XXXXXXX, KC.PLUS, KC.MINS,                        M_LMB  , KC.UNDS, XXXXXXX, XXXXXXX, XXXXXXX, KC.F12,
         _______, KC.AT  , XXXXXXX, XXXXXXX, XXXXXXX, KC.EQL,                         LPAR   , RPAR   , XXXXXXX, XXXXXXX, XXXXXXX, KC.PIPE,
         _______, XXXXXXX, XXXXXXX, XXXXXXX, KC.LCBR, KC.RCBR,                        KC.LBRC, KC.RBRC, XXXXXXX, XXXXXXX, KC.BSLS, XXXXXXX,
-                          _______, _______, _______, _______, _______,      _______, _______, _______, _______,_______,
+                          _______, _______, _______, _______, _______,      LAUNC  , _______, _______, _______,_______,
     ],
     [   #UPPER
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        MENU,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, P1,
