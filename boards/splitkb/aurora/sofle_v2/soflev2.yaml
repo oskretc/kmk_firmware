@@ -25,7 +25,7 @@ layers:
         { t: ▽, type: trans },
         { t: ▽, type: trans },
         { t: ▽, type: trans },
-        { t: ▽, type: trans },
+        ALT+ SPC,
         { t: ▽, type: trans },
         { t: ▽, type: trans },
         { t: ▽, type: trans },
@@ -36,13 +36,13 @@ layers:
     - ["", "", "", "", "", "", "", "", "", "", "", ""]
     - [ "", "", "ZEUP", "", "", "", "", "HOME", "", "END", "PGUP", "", ]
     - [ "", "ZELF", "ZEDN", "ZERT", "", "", "$$mdil:arrow-left$$", "$$mdil:arrow-down$$", "$$mdil:arrow-up$$", "$$mdil:arrow-right$$", "PGDN", "", ]
-    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ["", "", "", "", "WIN+ SFT+ A", "WIN+ SFT+ F", "", "", "", "", "", ""]
     - [
         { t: ▽, type: trans },
         { t: ▽, type: trans },
         { t: ▽, type: trans },
         { t: ▽, type: trans },
-        { t: ▽, type: trans },
+        WTAB,
         { t: ▽, type: trans },
         { t: ▽, type: trans },
         { t: ▽, type: trans },
@@ -84,7 +84,7 @@ layers:
     - ["", "1", "2", "3", "4", "5", "", "", "", "", "", ""]
     - ["", "", "", "", "", "", "", "", "", "", "", ""]
     - ["", "", "", "D", "", "", "$$mdil:arrow-left$$", "$$mdil:arrow-down$$", "$$mdil:arrow-up$$", "$$mdil:arrow-right$$", "", ""]
-    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ["", "", "", "", "WIN+ SFT+ A", "WIN+ SFT+ F", "", "", "", "", "", ""]
     - [
         { t: ▽, type: trans },
         { t: ▽, type: trans },

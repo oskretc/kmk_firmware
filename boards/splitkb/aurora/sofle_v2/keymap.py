@@ -61,6 +61,7 @@ MWSL= KC.LGUI(KC.LSFT(KC.A))
 MWSR= KC.LGUI(KC.LSFT(KC.F))
 
 LAUNC=KC.RALT(KC.SPC)
+WTAB=KC.LGUI(KC.TAB)
 
 if side==SplitSide.RIGHT:
     M_KEYS=KC.TB_HANDLER(0)
@@ -99,7 +100,7 @@ KEYMAP = [
         XXXXXXX, XXXXXXX, ZEUP   , XXXXXXX, XXXXXXX, XXXXXXX,                        KC.VOLU, KC.HOME, XXXXXXX,   KC.END,  KC.PGUP, P2,
         _______, ZELF   , ZEDN   , ZERT   , XXXXXXX, XXXXXXX,                        KC.LEFT, KC.DOWN, KC.UP, KC.RGHT, KC.PGDN, XXXXXXX,
         _______, XXXXXXX, XXXXXXX, XXXXXXX, MWSL   , MWSR   ,                        KC.MPLY, KC.INS,  KC.DEL,  XXXXXXX, XXXXXXX, XXXXXXX,
-                          _______, _______, _______, _______, _______,      _______, _______, _______, _______,_______,
+                          _______, _______, _______, _______, WTAB   ,      _______, _______, _______, _______,_______,
     ],
     [   #ADJUST
         XXXXXXX, RGB1   , RGB2   , RGB3   , RGB4   , RGB5   ,                        RGB1,    RGB2,    RGB3,    RGB4,    RGB5,    RGB6,
