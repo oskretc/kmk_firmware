@@ -63,6 +63,7 @@ MWSR= KC.LGUI(KC.LSFT(KC.F))
 LAUNC=KC.RALT(KC.SPC)
 WTAB=KC.LGUI(KC.TAB)
 CTAB=KC.LCTL(KC.TAB)
+CSTAB=KC.LCTL(KC.LSFT(KC.TAB))
 
 if side==SplitSide.RIGHT:
     M_KEYS=KC.TB_HANDLER(0)
@@ -97,8 +98,8 @@ KEYMAP = [
                           _______, _______, _______, _______, _______,      LAUNC  , _______, _______, _______,_______,
     ],
     [   #UPPER
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        MENU,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, P1,
-        XXXXXXX, XXXXXXX, ZEUP   , XXXXXXX, XXXXXXX, CTAB   ,                        KC.VOLU, KC.HOME, XXXXXXX,   KC.END,  KC.PGUP, P2,
+        XXXXXXX, FO1    , FO2    , FO3    , FO4    , FO5    ,                        MENU,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, P1,
+        XXXXXXX, XXXXXXX, ZEUP   , XXXXXXX, CSTAB  , CTAB   ,                        KC.VOLU, KC.HOME, XXXXXXX,   KC.END,  KC.PGUP, P2,
         _______, ZELF   , ZEDN   , ZERT   , XXXXXXX, XXXXXXX,                        KC.LEFT, KC.DOWN, KC.UP, KC.RGHT, KC.PGDN, XXXXXXX,
         _______, XXXXXXX, XXXXXXX, XXXXXXX, MWSL   , MWSR   ,                        KC.MPLY, KC.INS,  KC.DEL,  XXXXXXX, XXXXXXX, XXXXXXX,
                           _______, _______, _______, _______, WTAB   ,      _______, _______, _______, _______,_______,
