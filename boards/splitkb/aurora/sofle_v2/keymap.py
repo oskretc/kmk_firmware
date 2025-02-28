@@ -25,7 +25,7 @@ class CTHOMEKey(Key):
         keyboard.remove_key(KC.LCTL)
         time.sleep(0.1)
         
-KC_RDPE = CTHOMEKey()
+KC_RDPE = KC.NO
     
 # Cleaner key names
 _______ = KC.TRNS
@@ -88,7 +88,7 @@ LAUNC=KC.RALT(KC.SPC)
 WTAB=KC.LGUI(KC.TAB)
 CTAB=KC.LCTL(KC.TAB)
 CSTAB=KC.LCTL(KC.LSFT(KC.TAB))
-CAHOM=KC.LCTL(KC.LALT(KC.HOME))
+CAHOM=KC.RCTL(KC.RALT(KC.HOME))
 
 
 if side==SplitSide.RIGHT:
