@@ -8,7 +8,7 @@ from kmk.keys import KC
 from kmk.modules.holdtap import HoldTap
 from kmk.modules.layers import Layers
 from kmk.modules.split import Split,SplitType,SplitSide
-# from kmk.extensions.peg_rgb_matrix import Rgb_matrix,Rgb_matrix_data,Color
+from kmk.extensions.peg_rgb_matrix import Rgb_matrix,Rgb_matrix_data,Color
 from kmk.extensions.LED import LED
 from kmk.modules.pimoroni_trackball import Trackball, TrackballMode,ScrollDirection,ScrollHandler, PointingHandler, KeyHandler
 from kmk.modules.mouse_keys import MouseKeys
@@ -41,13 +41,35 @@ leds = LED(
 # Adding extensions
 # **RGB requires neopixel.py library to work**
 #
-rgb = RGB(
-    pixel_pin=keyboard.rgb_pixel_pin,
-    num_pixels=35,
-    hue_default=128,
-    sat_default=255,
-    val_default=4
-)
+# rgb = RGB(
+#     pixel_pin=keyboard.rgb_pixel_pin,
+#     num_pixels=35,
+#     hue_default=128,
+#     sat_default=255,
+#     val_default=4
+# )
+ALPHA = Color.AZURE
+MODS = Color.ORANGE
+LAYER= Color.RED
+NUMS = Color.CYAN
+
+rgb = Rgb_matrix(ledDisplay=Rgb_matrix_data(
+    keys=[
+    MODS,NUMS,NUMS,NUMS,NUMS,NUMS,                        NUMS,NUMS,NUMS,NUMS,NUMS,MODS,
+    MODS,ALPHA,ALPHA,ALPHA,ALPHA,ALPHA,                        ALPHA,ALPHA,ALPHA,ALPHA,ALPHA,MODS,
+    MODS,ALPHA,ALPHA,ALPHA,ALPHA,ALPHA,                        ALPHA,ALPHA,ALPHA,ALPHA,ALPHA,MODS,
+    MODS,ALPHA,ALPHA,ALPHA,ALPHA,ALPHA,                        ALPHA,ALPHA,ALPHA,ALPHA,ALPHA,MODS,
+                          MODS,MODS,LAYER,LAYER,MODS,  MODS,LAYER,MODS,MODS,MODS],
+                                    
+    underglow=[ 
+             [0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55]]
+             ),
+    split=True,
+    rightSide=True,
+    disable_auto_write=True)
+
+
+
 
 i2c_bus = io.I2C(sda=keyboard.SDA, scl=keyboard.SCL)
 display_driver = SSD1306(
