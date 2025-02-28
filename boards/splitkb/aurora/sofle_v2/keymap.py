@@ -1,8 +1,32 @@
-from kmk.keys import KC
+from kmk.keys import KC,Key
+import time
 
 from kmk.modules.split import SplitSide
 from storage import getmount
 side = SplitSide.LEFT if str(getmount('/').label)[-1] == 'L' else SplitSide.RIGHT
+
+class CTHOMEKey(Key):
+    def __init__(self):
+        pass
+    def on_press(self, keyboard, coord_int=None):
+        keyboard.add_key(KC.LCTL)
+        time.sleep(0.1)
+        keyboard.add_key(KC.LALT)
+        time.sleep(0.1)
+        keyboard.add_key(KC.HOME)
+        time.sleep(0.1)
+        
+        
+    def on_release(self, keyboard, coord_int=None):
+        keyboard.remove_key(KC.HOME)
+        time.sleep(0.1)
+        keyboard.remove_key(KC.LALT)
+        time.sleep(0.1)
+        keyboard.remove_key(KC.LCTL)
+        time.sleep(0.1)
+        
+KC_RDPE = CTHOMEKey()
+    
 # Cleaner key names
 _______ = KC.TRNS
 XXXXXXX = KC.NO
@@ -102,7 +126,7 @@ KEYMAP = [
     [   #UPPER
         XXXXXXX, FO1    , FO2    , FO3    , FO4    , FO5    ,                        MENU,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, P1,
         XXXXXXX, XXXXXXX, ZEUP   , XXXXXXX, CSTAB  , CTAB   ,                        KC.VOLU, KC.HOME, XXXXXXX,   KC.END,  KC.PGUP, P2,
-        _______, ZELF   , ZEDN   , ZERT   , XXXXXXX, CAHOM  ,                        KC.LEFT, KC.DOWN, KC.UP, KC.RGHT, KC.PGDN, XXXXXXX,
+        _______, ZELF   , ZEDN   , ZERT   , CAHOM, KC_RDPE  ,                        KC.LEFT, KC.DOWN, KC.UP, KC.RGHT, KC.PGDN, XXXXXXX,
         _______, XXXXXXX, XXXXXXX, XXXXXXX, MWSL   , MWSR   ,                        KC.MPLY, KC.INS,  KC.DEL,  XXXXXXX, XXXXXXX, XXXXXXX,
                           _______, _______, _______, _______, WTAB   ,      _______, _______, _______, _______,_______,
     ],
