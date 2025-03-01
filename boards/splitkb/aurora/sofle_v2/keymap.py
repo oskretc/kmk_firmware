@@ -3,6 +3,7 @@ import time
 
 from kmk.modules.split import SplitSide
 from storage import getmount
+
 side = SplitSide.LEFT if str(getmount('/').label)[-1] == 'L' else SplitSide.RIGHT
 
 class CTHOMEKey(Key):

@@ -13,7 +13,7 @@ from kmk.extensions.LED import LED
 from kmk.modules.pimoroni_trackball import Trackball, TrackballMode,ScrollDirection,ScrollHandler, PointingHandler, KeyHandler
 from kmk.modules.mouse_keys import MouseKeys
 import busio as io
-
+from kmk.modules.combos import Combos, Chord, Sequence
 keyboard = KMKKeyboard()
 
 # Adding modules
@@ -133,6 +133,12 @@ macros = Macros()
 keyboard.modules.append(macros)
 
 
+combos = Combos()
+keyboard.modules.append(combos)
+
+combos.combos = [
+    Chord((KC.J, KC.F), KC.ESC)
+]
 
 import keymap as keymap
 
