@@ -8,8 +8,8 @@ draw_config:
 layers:
   L0:
     # prettier-ignore
-    - [{t: ESC, h: ADJUST}, "! 1", "@ 2", "# 3", "$ 4", "% 5", "^ 6", "& 7", "* 8", "( 9", ") 0", "BSPC"]
-    - [TAB, Q, W, E, R, T, Y, U, I, O, P, DEL]
+    - [{t: ESC, h: ADJUST}, "! 1", "@ 2", "# 3", "$ 4", "% 5", "^ 6", "& 7", "* 8", "( 9", ") 0", "DEL"]
+    - [TAB, Q, W, E, R, T, Y, U, I, O, P, BSPC]
     - [LSFT, A, S, D, F, G, H, J, K, L, ": ;", {t: "'",h: ADJUST}]
     - [LCTL, Z, X, C, V, B,  N, M, "< ,", "> .", "? /", RSFT]
     - [LGUI, LALT, {t: LGUI, h: I3 }, LOWER, {t: ENT, h: LCTL}, {t: SPC, h: RSFT}, RAISE, RCTL, RALT, RGUI]
