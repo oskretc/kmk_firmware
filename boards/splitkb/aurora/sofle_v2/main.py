@@ -137,7 +137,7 @@ combos = Combos()
 keyboard.modules.append(combos)
 
 combos.combos = [
-    Chord((KC.J, KC.F), KC.ESC, timeout=500)
+    Chord((KC.J, KC.F), KC.ESC, timeout=500, per_key_timeout=False)
 ]
 
 import keymap as keymap
