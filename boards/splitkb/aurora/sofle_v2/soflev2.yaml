@@ -5,8 +5,10 @@ draw_config:
   key_h: 56.0
   split_gap: 10.0
   svg_extra_style: "text.label {stroke-width: 1; font-size: 18px;}"
+combos:
+  - { p: [28, 31], k: Esc, l: [Qwerty] }
 layers:
-  L0:
+  Qwerty:
     # prettier-ignore
     - [{t: ESC, h: ADJUST}, "! 1", "@ 2", "# 3", "$ 4", "% 5", "^ 6", "& 7", "* 8", "( 9", ") 0", "DEL"]
     - [TAB, Q, W, E, R, T, Y, U, I, O, P, BSPC]

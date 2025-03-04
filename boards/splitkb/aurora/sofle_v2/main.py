@@ -1,6 +1,6 @@
 from kb import KMKKeyboard
 
-from kmk.extensions.display import Display, TextEntry
+from kmk.extensions.display import Display, TextEntry,ImageEntry
 from kmk.extensions.display.ssd1306 import SSD1306
 from kmk.extensions.media_keys import MediaKeys
 from kmk.extensions.rgb import RGB
@@ -81,18 +81,23 @@ display_driver = SSD1306(
 display = Display(
     display=display_driver,
     entries=[
-        TextEntry(text='Layer: ', x=0, y=32, y_anchor='B'),
-        TextEntry(text='BASE', x=40, y=32, y_anchor='B', layer=0),
-        TextEntry(text='SYM', x=40, y=32, y_anchor='B', layer=1),
-        TextEntry(text='NAV', x=40, y=32, y_anchor='B', layer=2),
-        TextEntry(text='ADJ', x=40, y=32, y_anchor='B', layer=3),
-        TextEntry(text='I3', x=40, y=32, y_anchor='B', layer=4),
-        TextEntry(text='0 1 2 3 4', x=0, y=4),
-        TextEntry(text='0', x=0, y=4, inverted=True, layer=0),
-        TextEntry(text='1', x=12, y=4, inverted=True, layer=1),
-        TextEntry(text='2', x=24, y=4, inverted=True, layer=2),
-        TextEntry(text='3', x=36, y=4, inverted=True, layer=3),
-        TextEntry(text='4', x=48, y=4, inverted=True, layer=4),
+        # TextEntry(text='Layer: ', x=0, y=32, y_anchor='B'),
+        # TextEntry(text='BASE', x=40, y=32, y_anchor='B', layer=0),
+        # TextEntry(text='SYM', x=40, y=32, y_anchor='B', layer=1),
+        # TextEntry(text='NAV', x=40, y=32, y_anchor='B', layer=2),
+        # TextEntry(text='ADJ', x=40, y=32, y_anchor='B', layer=3),
+        # TextEntry(text='I3', x=40, y=32, y_anchor='B', layer=4),
+        # TextEntry(text='0 1 2 3 4', x=0, y=4),
+        # TextEntry(text='0', x=0, y=4, inverted=True, layer=0),
+        # TextEntry(text='1', x=12, y=4, inverted=True, layer=1),
+        # TextEntry(text='2', x=24, y=4, inverted=True, layer=2),
+        # TextEntry(text='3', x=36, y=4, inverted=True, layer=3),
+        # TextEntry(text='4', x=48, y=4, inverted=True, layer=4),
+        ImageEntry(image="0.bmp", x=0, y=0, layer=0),
+        ImageEntry(image="1.bmp", x=0, y=0, layer=1),
+        ImageEntry(image="2.bmp", x=0, y=0, layer=2),
+        ImageEntry(image="3.bmp", x=0, y=0, layer=3),
+        ImageEntry(image="4.bmp", x=0, y=0, layer=4),
     ],
     dim_time=10,
     dim_target=0.1,
@@ -100,7 +105,6 @@ display = Display(
     brightness=1,
     flip_right=True
 )
-
 
 if keyboard.side==SplitSide.RIGHT:
     trackball = Trackball(
