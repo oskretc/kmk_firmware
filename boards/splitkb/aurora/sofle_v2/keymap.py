@@ -148,3 +148,84 @@ KEYMAP = [
                           XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,XXXXXXX,
     ]
 ]
+
+
+# Mod-taps
+A_SFT = KC.HT(KC.A, KC.LSFT)
+SCLN_SFT = KC.HT(KC.SCLN, KC.LSFT)
+X_CTL = KC.HT(KC.X, KC.LCTRL)
+C_ALT = KC.HT(KC.C, KC.LALT)
+COM_ALT = KC.HT(KC.COMM, KC.LALT)
+DOT_CTL = KC.HT(KC.DOT, KC.LCTRL)
+CTL_ALT = KC.LCTRL(KC.LALT)
+
+
+# Layer tap for other home row keys
+S_L5 = KC.LT(5, KC.S)
+D_L1 = KC.LT(1, KC.D)
+F_L3 = KC.LT(3, KC.F)
+J_L4 = KC.LT(4, KC.J)
+K_L2 = KC.LT(2, KC.K)
+L_L6 = KC.LT(6, KC.L)
+SPC_L7 = KC.LT(7, KC.SPC)
+
+# fmt: off
+KEYMAP_FERRIS = [
+    [  # QWERTY
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, KC.Q   , KC.W   , KC.E   , KC.R   , KC.T   ,                        KC.Y   , KC.U   , KC.I   , KC.O   , KC.P   , XXXXXXX,
+        XXXXXXX, A_SFT  , S_L5   , D_L1   , F_L3   , KC.G   ,                        KC.H,    J_L4,    K_L2,    L_L6, SCLN_SFT,XXXXXXX,
+        XXXXXXX, KC.Z,  X_CTL,  C_ALT,    KC.V,    KC.B,    KC.N,    KC.M, COM_ALT, DOT_CTL,  KC.SLSH,XXXXXXX,
+                                XXXXXXX, XXXXXXX, XXXXXXX, KC.LGUI, ENTER,  SPC_L7,  KC.BSPC,XXXXXXX, XXXXXXX, XXXXXXX,
+    ],
+    [  # MOUSE
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       XXXXXXX, _______,   _______, _______,   _______, _______, _______, KC.MB_LMB, KC.MW_UP, KC.MB_LMB,  _______,XXXXXXX,
+       XXXXXXX, _______, KC.MB_RMB, _______, KC.MB_LMB, _______, _______,  KC.MS_LT, KC.MS_DN,  KC.MS_UP, KC.MS_RT,XXXXXXX,
+       XXXXXXX, _______,   _______, _______,   _______, _______, _______,   _______, KC.MW_DN,   _______,  _______,XXXXXXX,
+                                      XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, _______, _______,XXXXXXX, XXXXXXX, XXXXXXX,
+    ],
+    [  # NAVIGATION
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX,_______, _______, KC.PGUP, _______, _______, _______, _______, _______, _______, _______,XXXXXXX,
+        XXXXXXX,KC.LEFT,   KC.UP, KC.DOWN, KC.RGHT, _______, _______, KC.LGUI, CTL_ALT,  KC.MEH, KC.HYPR,XXXXXXX,
+        XXXXXXX,_______, KC.HOME, KC.PGDN,  KC.END, _______, _______, _______, _______, _______, _______,XXXXXXX,
+                                   XXXXXXX, XXXXXXX, XXXXXXX,_______, _______, _______, _______,XXXXXXX, XXXXXXX, XXXXXXX,
+    ],
+    [  # RIGHT SYMBOLS
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX,_______, _______, _______, _______, _______, _______, KC.UNDS, KC.PIPE, KC.QUOT, _______,XXXXXXX,
+        XXXXXXX,KC.CIRC, KC.ASTR, KC.AMPR, _______, _______, KC.HASH, KC.TILD, KC.SLSH, KC.DQUO,  KC.DLR,XXXXXXX,
+        XXXXXXX,_______, _______, _______, _______, _______, _______, KC.MINS, KC.BSLS,  KC.GRV, _______,XXXXXXX,
+                                   XXXXXXX, XXXXXXX, XXXXXXX,_______, _______, _______, _______,XXXXXXX, XXXXXXX, XXXXXXX,
+    ],
+    [  # LEFT SYMBOLS
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX,_______, KC.COLN, KC.LABK, KC.RABK, KC.SCLN, _______, _______, _______, _______, _______,XXXXXXX,
+        XXXXXXX,KC.LCBR, KC.RCBR, KC.LPRN, KC.RPRN,   KC.AT, _______, _______,  KC.EQL, KC.PLUS, KC.PERC,XXXXXXX,
+        XXXXXXX,_______, KC.EXLM, KC.LBRC, KC.RBRC, _______, _______, _______, _______, _______, _______,XXXXXXX,
+                                   XXXXXXX, XXXXXXX, XXXXXXX,_______, _______, _______, _______,XXXXXXX, XXXXXXX, XXXXXXX,
+    ],
+    [  # 5 FUNCTION
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX,_______, _______, _______, _______, _______, _______, KC.F7, KC.F8, KC.F9, KC.F10,XXXXXXX,
+        XXXXXXX,_______, _______, _______, _______, _______, _______, KC.F4, KC.F5, KC.F6, KC.F11,XXXXXXX,
+        XXXXXXX,_______, _______, _______, _______, _______, _______, KC.F1, KC.F2, KC.F3, KC.F12,XXXXXXX,
+                                   XXXXXXX, XXXXXXX, XXXXXXX,_______, _______, _______, _______,XXXXXXX, XXXXXXX, XXXXXXX,
+    ],
+    [  # 6 NUMBERS
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       XXXXXXX, KC.SLSH,   KC.N7,   KC.N8,   KC.N9, KC.PLUS, _______, _______, _______, _______, _______,XXXXXXX,
+         XXXXXXX, KC.N0,   KC.N1,   KC.N2,   KC.N3, KC.MINS, _______, _______, _______, _______, _______,XXXXXXX,
+       XXXXXXX, KC.ASTR,   KC.N4,   KC.N5,   KC.N6,  KC.EQL, _______, _______, _______, _______, _______,XXXXXXX,
+                                   XXXXXXX, XXXXXXX, XXXXXXX,_______, _______, _______, _______,XXXXXXX, XXXXXXX, XXXXXXX,
+    ],
+    [  # 7 ALWAYS AVAILABLE
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX,_______, _______, KC.COLN,  KC.ESC, _______, _______, _______, _______, _______,  KC.DEL,XXXXXXX,
+        XXXXXXX,_______, KC.PERC, KC.SLSH,  KC.ENT, _______, KC.DF(1), KC.LGUI, _______, _______, _______,XXXXXXX,
+        XXXXXXX,_______, _______, _______, KC.PERC, _______, KC.DF(0), KC.RALT, KC.RCTL, _______, KC.RESET,XXXXXXX,
+                                   XXXXXXX, XXXXXXX, XXXXXXX,_______,  KC.TAB, KC.LSFT, _______,XXXXXXX, XXXXXXX, XXXXXXX,
+    ],
+]
+# fmt:on

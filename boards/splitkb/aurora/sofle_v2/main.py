@@ -146,7 +146,8 @@ combos.combos = [
 
 import keymap as keymap
 
-keyboard.keymap= keymap.KEYMAP
+# keyboard.keymap= keymap.KEYMAP
+keyboard.keymap= keymap.KEYMAP_FERRIS
 
 if __name__ == '__main__':
     keyboard.go()
