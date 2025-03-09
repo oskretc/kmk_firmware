@@ -1,0 +1,186 @@
+layout: { qmk_keyboard: splitkb/aurora/sofle_v2/rev1, layout_name: LAYOUT }
+draw_config:
+  dark_mode: false
+  key_w: 60.0
+  key_h: 56.0
+  split_gap: 10.0
+  svg_extra_style: "text.label {stroke-width: 1; font-size: 18px;}"
+combos:
+  - { p: [28, 31], k: Esc, l: [Qwerty] }
+layers:
+  Qwerty:
+    # prettier-ignore
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ["", Q, W, E, R, T, Y, U, I, O, P, ""]
+    - ["", {t: A, h: SFT}, {t: S, h: FUN}, {t: D, h: NAV}, {t: F, h: RIGHT}, G, H, {t: J, h: LEFT}, {t: K, h: MOUSE}, {t: L, h: NUMBERS}, {t: ": ;", h: SFT}, ""]
+    - ["", Z, X, C, V, B,  N, M, "< ,", "> .", "? /", ""]
+    - ["", "", "", I3, {t: ENT, h: LCTL}, {t: SPC, h: SYS}, BSPC, "", "", ""]
+  MOUSE:
+    # prettier-ignore
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ["", "", "", "M_UP", "MW_UP", "", "", "", "", "", "", ""]
+    - ["", "", "M_LF", "M_DN", "M_RG", "MB_LB", "MB_LB", "MB_LB", "", "MB_RB", "", ""]
+    - ["", "", "", "", "MW_DN", "", "", "", "", "", "", ""]
+    - [
+        "",
+        "",
+        "",
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        "",
+        "",
+        "",
+      ]
+  NAV:
+    # prettier-ignore
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ["", "", "", "", "", "", "HOME", "PGUP", "END", { t: ▽, type: trans }, { t: ▽, type: trans }, "", ]
+    - ["", "", "", "", "PREV TAB", "NEXT TAB", "$$mdil:arrow-left$$", "$$mdil:arrow-down$$", "$$mdil:arrow-up$$", "$$mdil:arrow-right$$", "", "", ]
+    - ["", "", "", "", "", "", "DEL", "PGDN", "INS", "", "", ""]
+    - [
+        "",
+        "",
+        "",
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        "",
+        "",
+        "",
+      ]
+  RIGHT:
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - [
+        "",
+        "",
+        "",
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        "",
+        "",
+        "",
+      ]
+  LEFT:
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - [
+        "",
+        "",
+        "",
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        "",
+        "",
+        "",
+      ]
+  FUN:
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - [
+        "",
+        "",
+        "",
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        "",
+        "",
+        "",
+      ]
+  NUMBERS:
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - [
+        "",
+        "",
+        "",
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        "",
+        "",
+        "",
+      ]
+  SYS:
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - [
+        "",
+        "",
+        "",
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        "",
+        "",
+        "",
+      ]
+  ADJUST:
+    - [
+        "",
+        "RGB1",
+        "RGB2",
+        "RGB3",
+        "RGB4",
+        "RGB5",
+        "RGB1",
+        "RGB2",
+        "RGB3",
+        "RGB4",
+        "RGB5",
+        "",
+      ]
+    - ["", "", "", "", "", "", "M_KEYS", "", "", "", "", ""]
+    - ["", "RGB Tog", "PWR LED Tog", "", "", "", "M_POINT", "", "", "", "", ""]
+    - ["", "", "", "", "", "", "M_SCROL", "", "", "", "", ""]
+    - [
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+      ]
+  I3:
+    # prettier-ignore
+    - ["", "1", "2", "3", "4", "5", "", "", "", "", "", ""]
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ["", "", "", "D", "", "", "$$mdil:arrow-left$$", "$$mdil:arrow-down$$", "$$mdil:arrow-up$$", "$$mdil:arrow-right$$", "", ""]
+    - ["", "", "", "", "WS LEFT", "WS RIGHT", "", "", "", "", "", ""]
+    - [
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+        { t: ▽, type: trans },
+      ]
