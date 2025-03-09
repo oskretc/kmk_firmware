@@ -228,9 +228,9 @@ KEYMAP_FERRIS = [
     ],
     [  # 7 ALWAYS AVAILABLE
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, _______, _______, KC.COLN, KC.ESC , _______,                        P1     , P2     , _______, _______, KC.DEL , XXXXXXX,
-        XXXXXXX, _______, KC.PERC, KC.SLSH, KC.ENT , _______,                       KC.DF(1), KC.LGUI, _______, _______, _______, XXXXXXX,
-        XXXXXXX,KC.RESET, _______, _______, KC.PERC, WTAB   ,                       KC.DF(0), KC.RALT, KC.RCTL, _______,KC.RESET, XXXXXXX,
+        XXXXXXX, _______, _______, KC.COLN, KC.ESC , _______,                        P1     , P2     , _______, M_KEYS , KC.DEL , XXXXXXX,
+        XXXXXXX, _______, KC.PERC, KC.SLSH, KC.ESC , KC.MINS,                       KC.DF(1), KC.LGUI, KC.RSFT, M_POINT, _______, XXXXXXX,
+        XXXXXXX, _______, _______, _______, KC.PERC, WTAB   ,                       KC.DF(0), KC.RALT, KC.RCTL, M_SCROL,KC.RESET, XXXXXXX,
                           XXXXXXX, XXXXXXX, XXXXXXX, _______, KC.TAB ,      _______, _______, XXXXXXX, XXXXXXX, XXXXXXX,
     ],
     [  # 8 I3
