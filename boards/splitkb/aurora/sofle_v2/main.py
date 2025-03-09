@@ -49,9 +49,11 @@ leds = LED(
 #     val_default=4
 # )
 ALPHA = Color.AZURE
-MODS = Color.ORANGE
+# MODS = Color.ORANGE
+MODS = Color.BLACK
 LAYER= Color.RED
-NUMS = Color.CYAN
+# NUMS = Color.CYAN
+NUMS = Color.BLACK
 
 rgb = Rgb_matrix(ledDisplay=Rgb_matrix_data(
     keys=[
@@ -59,7 +61,7 @@ rgb = Rgb_matrix(ledDisplay=Rgb_matrix_data(
     MODS,ALPHA,ALPHA,ALPHA,ALPHA,ALPHA,                        ALPHA,ALPHA,ALPHA,ALPHA,ALPHA,MODS,
     MODS,ALPHA,ALPHA,ALPHA,ALPHA,ALPHA,                        ALPHA,ALPHA,ALPHA,ALPHA,ALPHA,MODS,
     MODS,ALPHA,ALPHA,ALPHA,ALPHA,ALPHA,                        ALPHA,ALPHA,ALPHA,ALPHA,ALPHA,MODS,
-                          MODS,MODS,LAYER,LAYER,MODS,  MODS,LAYER,MODS,MODS,MODS],
+                          MODS,MODS,MODS,LAYER,LAYER,  LAYER,LAYER,MODS,MODS,MODS],
                                     
     underglow=[ 
              [0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55]]
@@ -90,10 +92,10 @@ display = Display(
         TextEntry(text='FUN', x=40, y=32, y_anchor='B', layer=5),
         TextEntry(text='NUMBER', x=40, y=32, y_anchor='B', layer=6),
         TextEntry(text='RND', x=40, y=32, y_anchor='B', layer=7),
-        TextEntry(text='0 D K F J S L >', x=0, y=4),
+        TextEntry(text='0 K D F J S L >', x=0, y=4),
         TextEntry(text='0', x=0, y=4, inverted=True, layer=0),
-        TextEntry(text='D', x=12, y=4, inverted=True, layer=1),
-        TextEntry(text='K', x=24, y=4, inverted=True, layer=2),
+        TextEntry(text='K', x=12, y=4, inverted=True, layer=1),
+        TextEntry(text='D', x=24, y=4, inverted=True, layer=2),
         TextEntry(text='F', x=36, y=4, inverted=True, layer=3),
         TextEntry(text='J', x=48, y=4, inverted=True, layer=4),
         TextEntry(text='S', x=60, y=4, inverted=True, layer=5),
