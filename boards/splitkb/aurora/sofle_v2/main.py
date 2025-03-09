@@ -27,7 +27,12 @@ split = Split(
 )
 combo_layers = {(1, 2): 3}
 layers = Layers(combo_layers)
-keyboard.modules = [split, layers, HoldTap()]
+holdtap= HoldTap()
+
+# holdtap.tap_time = 200
+# holdtap.prefer_hold=False
+# holdtap.tap_interrupted=True
+keyboard.modules = [split, layers, holdtap]
 
 
 # POWER LED CONTROL

@@ -156,12 +156,12 @@ KEYMAP = [
 
 
 # Mod-taps
-A_SFT = KC.HT(KC.A, KC.LSFT)
-SCLN_SFT = KC.HT(KC.SCLN, KC.LSFT)
-X_CTL = KC.HT(KC.X, KC.LCTRL)
-C_ALT = KC.HT(KC.C, KC.LALT)
-COM_ALT = KC.HT(KC.COMM, KC.LALT)
-DOT_CTL = KC.HT(KC.DOT, KC.LCTRL)
+A_SFT = KC.HT(KC.A, KC.LSFT, tap_time=300, prefer_hold=False)
+SCLN_SFT = KC.HT(KC.SCLN, KC.LSFT,tap_time=300, prefer_hold=False)
+X_CTL = KC.HT(KC.X, KC.LCTRL,tap_time=300, prefer_hold=False)
+C_ALT = KC.HT(KC.C, KC.LALT,tap_time=300, prefer_hold=False)
+COM_ALT = KC.HT(KC.COMM, KC.LALT,tap_time=300, prefer_hold=False)
+DOT_CTL = KC.HT(KC.DOT, KC.LCTRL,tap_time=300, prefer_hold=False)
 CTL_ALT = KC.LCTRL(KC.LALT)
 
 
@@ -201,14 +201,14 @@ KEYMAP_FERRIS = [
     [  # RIGHT SYMBOLS
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         XXXXXXX, _______, _______, _______, _______, _______,                        _______, KC.UNDS, KC.PIPE, KC.QUOT, _______, XXXXXXX,
-        XXXXXXX, KC.CIRC, KC.ASTR, KC.AMPR, _______, _______,                        KC.HASH, KC.TILD, KC.SLSH, KC.DQUO,  KC.DLR, XXXXXXX,
+        XXXXXXX, KC.CIRC, KC.ASTR, KC.AMPR, XXXXXXX, _______,                        KC.HASH, KC.TILD, KC.SLSH, KC.DQUO,  KC.DLR, XXXXXXX,
         XXXXXXX, _______, _______, _______, _______, _______,                        _______, KC.MINS, KC.BSLS, KC.GRV , _______, XXXXXXX,
                           XXXXXXX, XXXXXXX, XXXXXXX, _______, _______,      _______, _______, XXXXXXX, XXXXXXX, XXXXXXX,
     ],
     [  # LEFT SYMBOLS
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         XXXXXXX, _______, KC.COLN, KC.LABK, KC.RABK, KC.SCLN,                        _______, _______, _______, _______, _______, XXXXXXX,
-        XXXXXXX, KC.LCBR, KC.RCBR, KC.LPRN, KC.RPRN, KC.AT  ,                        _______, _______,  KC.EQL, KC.PLUS, KC.PERC, XXXXXXX,
+        XXXXXXX, KC.LCBR, KC.RCBR, KC.LPRN, KC.RPRN, KC.AT  ,                        _______, XXXXXXX,  KC.EQL, KC.PLUS, KC.PERC, XXXXXXX,
         XXXXXXX, _______, KC.EXLM, KC.LBRC, KC.RBRC, _______,                        _______, _______, _______, _______, _______, XXXXXXX,
                           XXXXXXX, XXXXXXX, XXXXXXX, _______, _______,      _______, _______, XXXXXXX, XXXXXXX, XXXXXXX,
     ],
@@ -222,7 +222,7 @@ KEYMAP_FERRIS = [
     [  # 6 NUMBERS
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         XXXXXXX, KC.SLSH, KC.N7  , KC.N8  , KC.N9  , KC.PLUS,                        _______, _______, _______, _______, _______, XXXXXXX,
-        XXXXXXX, KC.ASTR, KC.N4  , KC.N5  , KC.N6  , KC.MINS,                        _______, _______, _______, _______, _______, XXXXXXX,
+        XXXXXXX, KC.ASTR, KC.N4  , KC.N5  , KC.N6  , KC.MINS,                        _______, _______, _______, XXXXXXX, _______, XXXXXXX,
         XXXXXXX, KC.N0  , KC.N1  , KC.N2  , KC.N3  , KC.EQL ,                        _______, _______, _______, _______, _______, XXXXXXX,
                           XXXXXXX, XXXXXXX, XXXXXXX, _______, _______,      _______, _______,XXXXXXX, XXXXXXX, XXXXXXX,
     ],
