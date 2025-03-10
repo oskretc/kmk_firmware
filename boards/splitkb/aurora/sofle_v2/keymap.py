@@ -224,17 +224,17 @@ KEYMAP_FERRIS = [
     ],
     [  # 6 NUMBERS
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, _______, _______, _______, _______, _______,                        KC.SLSH, KC.N7  , KC.N8  , KC.N9  , KC.PLUS, XXXXXXX,
-        XXXXXXX, _______, XXXXXXX, _______, _______, _______,                        KC.N0, KC.N4  , KC.N5  , KC.N6  , KC.MINS, XXXXXXX,
-        XXXXXXX, _______, _______, _______, _______, _______,                        KC.ASTR, KC.N1  , KC.N2  , KC.N3  , KC.EQL , XXXXXXX,
-                          XXXXXXX, XXXXXXX, XXXXXXX, _______, _______,      _______, _______,XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, _______, _______, _______, KC.ASTR, KC.PLUS,                        KC.SLSH, KC.N7  , KC.N8  , KC.N9  , KC.PLUS, XXXXXXX,
+        XXXXXXX, _______, XXXXXXX, _______, _______, KC.MINS,                        KC.N0  , KC.N4  , KC.N5  , KC.N6  , KC.MINS, XXXXXXX,
+        XXXXXXX, _______, _______, _______, _______, KC.EQL ,                        KC.DOT , KC.N1  , KC.N2  , KC.N3  , KC.EQL , XXXXXXX,
+                          XXXXXXX, XXXXXXX, XXXXXXX, _______, _______,      _______, _______, XXXXXXX, XXXXXXX, XXXXXXX,
     ],
     [  # 7 ALWAYS AVAILABLE
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         XXXXXXX, _______, _______, KC.COLN, KC.ESC , _______,                        _______, P2     , _______, M_KEYS , KC.DEL , XXXXXXX,
         XXXXXXX, _______, KC.PERC, KC.SLSH, KC.ENT , KC.MINS,                       KC.DF(1), KC.LGUI, KC.RSFT, M_POINT, P1     , XXXXXXX,
         XXXXXXX, _______, _______, _______, KC.PERC, WTAB   ,                       KC.DF(0), KC.RALT, KC.RCTL, M_SCROL,KC.RESET, XXXXXXX,
-                          XXXXXXX, XXXXXXX, XXXXXXX, _______, KC.TAB ,      _______, _______, XXXXXXX, XXXXXXX, XXXXXXX,
+                          XXXXXXX, XXXXXXX, XXXXXXX, _______, KC.TAB ,      XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX,
     ],
     [  # 8 I3
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
