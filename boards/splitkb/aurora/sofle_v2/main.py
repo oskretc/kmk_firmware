@@ -56,7 +56,9 @@ leds = LED(
 ALPHA = Color.AZURE
 # MODS = Color.ORANGE
 MODS = Color.BLACK
+MODSF = Color.ORANGE
 LAYER= Color.RED
+AL_LY= Color.YELLOW
 # NUMS = Color.CYAN
 NUMS = Color.BLACK
 
@@ -64,9 +66,9 @@ rgb = Rgb_matrix(ledDisplay=Rgb_matrix_data(
     keys=[
     MODS,NUMS,NUMS,NUMS,NUMS,NUMS,                        NUMS,NUMS,NUMS,NUMS,NUMS,MODS,
     MODS,ALPHA,ALPHA,ALPHA,ALPHA,ALPHA,                        ALPHA,ALPHA,ALPHA,ALPHA,ALPHA,MODS,
+    MODS,ALPHA,AL_LY,AL_LY,AL_LY,ALPHA,                        ALPHA,AL_LY,AL_LY,AL_LY,ALPHA,MODS,
     MODS,ALPHA,ALPHA,ALPHA,ALPHA,ALPHA,                        ALPHA,ALPHA,ALPHA,ALPHA,ALPHA,MODS,
-    MODS,ALPHA,ALPHA,ALPHA,ALPHA,ALPHA,                        ALPHA,ALPHA,ALPHA,ALPHA,ALPHA,MODS,
-                          MODS,MODS,MODS,LAYER,LAYER,  LAYER,LAYER,MODS,MODS,MODS],
+                          MODS,MODS,MODSF,LAYER,LAYER,  LAYER,MODSF,MODSF,MODS,MODS],
                                     
     underglow=[ 
              [0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55],[0,0,55]]
@@ -88,31 +90,35 @@ display_driver = SSD1306(
 display = Display(
     display=display_driver,
     entries=[
-        TextEntry(text='Layer: ', x=0, y=32, y_anchor='B'),
-        TextEntry(text='BASE', x=40, y=32, y_anchor='B', layer=0),
-        TextEntry(text='MOUSE', x=40, y=32, y_anchor='B', layer=1),
-        TextEntry(text='NAV', x=40, y=32, y_anchor='B', layer=2),
-        TextEntry(text='RIGHT', x=40, y=32, y_anchor='B', layer=3),
-        TextEntry(text='LEFT', x=40, y=32, y_anchor='B', layer=4),
-        TextEntry(text='FUN', x=40, y=32, y_anchor='B', layer=5),
-        TextEntry(text='NUMBER', x=40, y=32, y_anchor='B', layer=6),
-        TextEntry(text='RND', x=40, y=32, y_anchor='B', layer=7),
-        TextEntry(text='I3', x=40, y=32, y_anchor='B', layer=8),
-        TextEntry(text='0 K D F J S L > 3', x=0, y=4),
-        TextEntry(text='0', x=0, y=4, inverted=True, layer=0),
-        TextEntry(text='K', x=12, y=4, inverted=True, layer=1),
-        TextEntry(text='D', x=24, y=4, inverted=True, layer=2),
-        TextEntry(text='F', x=36, y=4, inverted=True, layer=3),
-        TextEntry(text='J', x=48, y=4, inverted=True, layer=4),
-        TextEntry(text='S', x=60, y=4, inverted=True, layer=5),
-        TextEntry(text='L', x=72, y=4, inverted=True, layer=6),
-        TextEntry(text='>', x=84, y=4, inverted=True, layer=7),
-        TextEntry(text='3', x=96, y=4, inverted=True, layer=8),
-        # ImageEntry(image="0.bmp", x=0, y=0, layer=0),
-        # ImageEntry(image="1.bmp", x=0, y=0, layer=1),
-        # ImageEntry(image="2.bmp", x=0, y=0, layer=2),
-        # ImageEntry(image="3.bmp", x=0, y=0, layer=3),
-        # ImageEntry(image="4.bmp", x=0, y=0, layer=4),
+        # TextEntry(text='Layer: ', x=0, y=32, y_anchor='B'),
+        # TextEntry(text='BASE', x=40, y=32, y_anchor='B', layer=0),
+        # TextEntry(text='MOUSE', x=40, y=32, y_anchor='B', layer=1),
+        # TextEntry(text='NAV', x=40, y=32, y_anchor='B', layer=2),
+        # TextEntry(text='RIGHT', x=40, y=32, y_anchor='B', layer=3),
+        # TextEntry(text='LEFT', x=40, y=32, y_anchor='B', layer=4),
+        # TextEntry(text='FUN', x=40, y=32, y_anchor='B', layer=5),
+        # TextEntry(text='NUMBER', x=40, y=32, y_anchor='B', layer=6),
+        # TextEntry(text='RND', x=40, y=32, y_anchor='B', layer=7),
+        # TextEntry(text='I3', x=40, y=32, y_anchor='B', layer=8),
+        # TextEntry(text='0 K D F J L S U 3', x=0, y=4),
+        # TextEntry(text='0', x=0, y=4, inverted=True, layer=0),
+        # TextEntry(text='K', x=12, y=4, inverted=True, layer=1),
+        # TextEntry(text='D', x=24, y=4, inverted=True, layer=2),
+        # TextEntry(text='F', x=36, y=4, inverted=True, layer=3),
+        # TextEntry(text='J', x=48, y=4, inverted=True, layer=4),
+        # TextEntry(text='L', x=60, y=4, inverted=True, layer=5),
+        # TextEntry(text='S', x=72, y=4, inverted=True, layer=6),
+        # TextEntry(text='U', x=84, y=4, inverted=True, layer=7),
+        # TextEntry(text='3', x=96, y=4, inverted=True, layer=8),
+        ImageEntry(image="0.bmp", x=0, y=0, layer=0),
+        ImageEntry(image="1.bmp", x=0, y=0, layer=1),
+        ImageEntry(image="2.bmp", x=0, y=0, layer=2),
+        ImageEntry(image="3.bmp", x=0, y=0, layer=3),
+        ImageEntry(image="4.bmp", x=0, y=0, layer=4),
+        ImageEntry(image="5.bmp", x=0, y=0, layer=5),
+        ImageEntry(image="6.bmp", x=0, y=0, layer=6),
+        ImageEntry(image="7.bmp", x=0, y=0, layer=7),
+        ImageEntry(image="8.bmp", x=0, y=0, layer=8),
     ],
     dim_time=10,
     dim_target=0.1,

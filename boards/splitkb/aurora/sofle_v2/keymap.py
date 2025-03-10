@@ -176,7 +176,8 @@ J_L4 = KC.LT(4, KC.J)
 K_L1 = KC.LT(1, KC.K)
 L_L5 = KC.LT(5, KC.L)
 SPC_L7 = KC.LT(7, KC.SPC)
-I3FG = KC.LT(8, KC.LGUI)
+# I3FG = KC.LT(8, KC.LGUI)
+I3FG = KC.MO(8)
 
 # fmt: off
 KEYMAP_FERRIS = [
