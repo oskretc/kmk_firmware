@@ -182,7 +182,7 @@ KEYMAP_FERRIS = [
         XXXXXXX, KC.Q   , KC.W   , KC.E   , KC.R   , KC.T   ,                        KC.Y   , KC.U   , KC.I   , KC.O   , KC.P   , XXXXXXX,
         XXXXXXX, A_SFT  , S_L5   , D_L2   , F_L3   , KC.G   ,                        KC.H   , J_L4   , K_L1   , L_L6   ,SCLN_SFT, XXXXXXX,
         XXXXXXX, KC.Z   , X_CTL  , C_ALT  , KC.V   , KC.B   ,                        KC.N   , KC.M   , COM_ALT, DOT_CTL, KC.SLSH, XXXXXXX,
-                          XXXXXXX, XXXXXXX, XXXXXXX, I3FG   , ENTER  ,       SPC_L7,  KC.BSPC,XXXXXXX, XXXXXXX, XXXXXXX,
+                          XXXXXXX, XXXXXXX, KC.ESC , I3FG   , ENTER  ,       SPC_L7,  KC.BSPC,KC.RGUI, XXXXXXX, XXXXXXX,
     ],
     [  # MOUSE
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
@@ -228,8 +228,8 @@ KEYMAP_FERRIS = [
     ],
     [  # 7 ALWAYS AVAILABLE
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, _______, _______, KC.COLN, KC.ESC , _______,                        P1     , P2     , _______, M_KEYS , KC.DEL , XXXXXXX,
-        XXXXXXX, _______, KC.PERC, KC.SLSH, KC.ESC , KC.MINS,                       KC.DF(1), KC.LGUI, KC.RSFT, M_POINT, _______, XXXXXXX,
+        XXXXXXX, _______, _______, KC.COLN, KC.ESC , _______,                        _______, P2     , _______, M_KEYS , KC.DEL , XXXXXXX,
+        XXXXXXX, _______, KC.PERC, KC.SLSH, KC.ESC , KC.MINS,                       KC.DF(1), KC.LGUI, KC.RSFT, M_POINT, P1     , XXXXXXX,
         XXXXXXX, _______, _______, _______, KC.PERC, WTAB   ,                       KC.DF(0), KC.RALT, KC.RCTL, M_SCROL,KC.RESET, XXXXXXX,
                           XXXXXXX, XXXXXXX, XXXXXXX, _______, KC.TAB ,      _______, _______, XXXXXXX, XXXXXXX, XXXXXXX,
     ],

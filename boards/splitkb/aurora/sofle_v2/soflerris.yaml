@@ -13,8 +13,8 @@ layers:
     - ["", "", "", "", "", "", "", "", "", "", "", ""]
     - ["", Q, W, E, R, T, Y, U, I, O, P, ""]
     - ["", {t: A, h: SFT}, {t: S, h: FUN, type: held}, {t: D, h: NAV, type: held}, {t: F, h: RIGHT, type: held}, G, H, {t: J, h: LEFT, type: held}, {t: K, h: MOUSE, type: held}, {t: L, h: NUMBERS, type: held}, {t: ": ;", h: SFT}, ""]
-    - ["", Z, X, C, V, B,  N, M, "< ,", "> .", "? /", ""]
-    - ["", "", "", I3, {t: ENT, h: LCTL}, {t: SPC, h: SYS, type: held}, BSPC, "", "", ""]
+    - ["", Z, {t: X, h: CTL}, {t: C, h: ALT}, V, B,  N, M, {t: "< ,", h: ALT}, {t: "> .", h: CTL}, "? /", ""]
+    - ["", "", "ESC", I3, {t: ENT, h: LCTL}, {t: SPC, h: SYS, type: held}, BSPC, "RGUI", "", ""]
   MOUSE:
     # prettier-ignore
     - ["", "", "", "", "", "", "", "", "", "", "", ""]

@@ -296,10 +296,12 @@ text.label {stroke-width: 1; font-size: 18px;}</style>
 <g transform="translate(140, 203)" class="key keypos-38">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">X</text>
+<text x="0" y="24" class="key hold">CTL</text>
 </g>
 <g transform="translate(196, 196)" class="key keypos-39">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">C</text>
+<text x="0" y="24" class="key hold">ALT</text>
 </g>
 <g transform="translate(252, 203)" class="key keypos-40">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -320,14 +322,16 @@ text.label {stroke-width: 1; font-size: 18px;}</style>
 <g transform="translate(728, 196)" class="key keypos-44">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">&lt;</tspan><tspan x="0" dy="1.2em">,</tspan>
+<tspan x="0" dy="-1.2em">&lt;</tspan><tspan x="0" dy="1.2em">,</tspan>
 </text>
+<text x="0" y="24" class="key hold">ALT</text>
 </g>
 <g transform="translate(784, 203)" class="key keypos-45">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">&gt;</tspan><tspan x="0" dy="1.2em">.</tspan>
+<tspan x="0" dy="-1.2em">&gt;</tspan><tspan x="0" dy="1.2em">.</tspan>
 </text>
+<text x="0" y="24" class="key hold">CTL</text>
 </g>
 <g transform="translate(840, 217)" class="key keypos-46">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -346,6 +350,7 @@ text.label {stroke-width: 1; font-size: 18px;}</style>
 </g>
 <g transform="translate(224, 260)" class="key keypos-50">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">ESC</text>
 </g>
 <g transform="translate(280, 266)" class="key keypos-51">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -369,6 +374,7 @@ text.label {stroke-width: 1; font-size: 18px;}</style>
 </g>
 <g transform="translate(700, 260)" class="key keypos-55">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">RGUI</text>
 </g>
 <g transform="translate(756, 259)" class="key keypos-56">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
