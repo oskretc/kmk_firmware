@@ -6,7 +6,7 @@ draw_config:
   split_gap: 10.0
   svg_extra_style: "text.label {stroke-width: 1; font-size: 18px;}"
 combos:
-  - { p: [28, 31], k: Esc, l: [QWERTY] }
+  - { p: [31, 32], k: Esc, l: [QWERTY] }
 layers:
   QWERTY:
     # prettier-ignore

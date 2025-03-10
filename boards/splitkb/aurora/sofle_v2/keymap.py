@@ -169,12 +169,12 @@ CTL_ALT = KC.LCTRL(KC.LALT)
 
 
 # Layer tap for other home row keys
-S_L5 = KC.LT(5, KC.S)
+S_L6 = KC.LT(6, KC.S)
 D_L2 = KC.LT(2, KC.D)
 F_L3 = KC.LT(3, KC.F)
 J_L4 = KC.LT(4, KC.J)
 K_L1 = KC.LT(1, KC.K)
-L_L6 = KC.LT(6, KC.L)
+L_L5 = KC.LT(5, KC.L)
 SPC_L7 = KC.LT(7, KC.SPC)
 I3FG = KC.LT(8, KC.LGUI)
 
@@ -183,7 +183,7 @@ KEYMAP_FERRIS = [
     [  # QWERTY
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         XXXXXXX, KC.Q   , KC.W   , KC.E   , KC.R   , KC.T   ,                        KC.Y   , KC.U   , KC.I   , KC.O   , KC.P   , XXXXXXX,
-        XXXXXXX, A_SFT  , S_L5   , D_L2   , F_L3   , KC.G   ,                        KC.H   , J_L4   , K_L1   , L_L6   ,SCLN_SFT, XXXXXXX,
+        XXXXXXX, A_SFT  , S_L6   , D_L2   , F_L3   , KC.G   ,                        KC.H   , J_L4   , K_L1   , L_L5   ,SCLN_SFT, XXXXXXX,
         XXXXXXX, KC.Z   , X_CTL  , C_ALT  , KC.V   , KC.B   ,                        KC.N   , KC.M   , COM_ALT, DOT_CTL, KC.SLSH, XXXXXXX,
                           XXXXXXX, XXXXXXX, KC.ESC , I3FG   , ENTER  ,       SPC_L7, KC.BSPC, KC.RGUI, XXXXXXX, XXXXXXX,
     ],
@@ -217,16 +217,16 @@ KEYMAP_FERRIS = [
     ],
     [  # 5 FUNCTION
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, _______, _______, _______, _______, _______,                        _______, KC.F7  , KC.F8  , KC.F9  , KC.F10 , XXXXXXX,
-        XXXXXXX, _______, XXXXXXX, _______, _______, _______,                        _______, KC.F4  , KC.F5  , KC.F6  , KC.F11 , XXXXXXX,
-        XXXXXXX, _______, _______, _______, RGB2   , RGB1   ,                        _______, KC.F1  , KC.F2  , KC.F3  , KC.F12 , XXXXXXX,
+        XXXXXXX, _______, KC.F7  , KC.F8  , KC.F9  , KC.F10 ,                        _______, _______, _______, _______, _______, XXXXXXX,
+        XXXXXXX, _______, KC.F4  , KC.F5  , KC.F6  , KC.F11 ,                        _______, _______, _______, _______, XXXXXXX, XXXXXXX,
+        XXXXXXX, _______, KC.F1  , KC.F2  , KC.F3  , KC.F12 ,                        _______, _______, _______, _______, _______, XXXXXXX,
                           XXXXXXX, XXXXXXX, XXXXXXX, _______, _______,      _______, _______, XXXXXXX, XXXXXXX, XXXXXXX,
     ],
     [  # 6 NUMBERS
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, KC.SLSH, KC.N7  , KC.N8  , KC.N9  , KC.PLUS,                        _______, _______, _______, _______, _______, XXXXXXX,
-        XXXXXXX, KC.ASTR, KC.N4  , KC.N5  , KC.N6  , KC.MINS,                        _______, _______, _______, XXXXXXX, _______, XXXXXXX,
-        XXXXXXX, KC.N0  , KC.N1  , KC.N2  , KC.N3  , KC.EQL ,                        _______, _______, _______, _______, _______, XXXXXXX,
+        XXXXXXX, _______, _______, _______, _______, _______,                        KC.SLSH, KC.N7  , KC.N8  , KC.N9  , KC.PLUS, XXXXXXX,
+        XXXXXXX, _______, XXXXXXX, _______, _______, _______,                        KC.N0, KC.N4  , KC.N5  , KC.N6  , KC.MINS, XXXXXXX,
+        XXXXXXX, _______, _______, _______, _______, _______,                        KC.ASTR, KC.N1  , KC.N2  , KC.N3  , KC.EQL , XXXXXXX,
                           XXXXXXX, XXXXXXX, XXXXXXX, _______, _______,      _______, _______,XXXXXXX, XXXXXXX, XXXXXXX,
     ],
     [  # 7 ALWAYS AVAILABLE
@@ -239,8 +239,8 @@ KEYMAP_FERRIS = [
     [  # 8 I3
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         XXXXXXX, FO1    , FO2    , FO3    , FO4    , FO5    ,                        FO6    , FO7    , FO8    , FO9    , FO0    , XXXXXXX,
-        XXXXXXX, XXXXXXX, XXXXXXX, I3MVL  , I3MVR  , I3CLS  ,                        FOLFT  , FODN   , FOUP   , FORGH  , XXXXXXX, XXXXXXX,
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        MWSL   , MWSR   , SWTDES , XXXXXXX, XXXXXXX, XXXXXXX,
+        RGB1   , XXXXXXX, XXXXXXX, I3MVL  , I3MVR  , I3CLS  ,                        FOLFT  , FODN   , FOUP   , FORGH  , XXXXXXX, XXXXXXX,
+        RGB2   , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        MWSL   , MWSR   , SWTDES , XXXXXXX, XXXXXXX, XXXXXXX,
                           XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,      LAUNC, _______, XXXXXXX, XXXXXXX, XXXXXXX,
     ],
 ]
