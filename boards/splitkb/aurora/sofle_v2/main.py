@@ -159,16 +159,17 @@ keyboard.modules.append(macros)
 
 
 combos = Combos()
-
-combos.combos = [
-    Chord((KC.K, KC.J), KC.ESC, timeout=500, per_key_timeout=False)
-]
 keyboard.modules.append(combos)
+
 
 import keymap as keymap
 
 # keyboard.keymap= keymap.KEYMAP
 keyboard.keymap= keymap.KEYMAP_FERRIS
+
+combos.combos = [
+    Chord((KC.M, KC.COMM), KC.ESC)
+]
 
 if __name__ == '__main__':
     keyboard.go()
