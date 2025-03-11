@@ -161,6 +161,8 @@ KEYMAP = [
 # Mod-taps
 A_SFT = KC.HT(KC.A, KC.LSFT, tap_time=300, prefer_hold=False)
 SCLN_SFT = KC.HT(KC.SCLN, KC.LSFT,tap_time=300, prefer_hold=False)
+G_SFT = KC.HT(KC.G, KC.LSFT, tap_time=300, prefer_hold=False)
+H_SFT = KC.HT(KC.H, KC.LSFT, tap_time=300, prefer_hold=False)
 X_CTL = KC.HT(KC.X, KC.LCTRL,tap_time=300, prefer_hold=False)
 C_ALT = KC.HT(KC.C, KC.LALT,tap_time=300, prefer_hold=False)
 COM_ALT = KC.HT(KC.COMM, KC.LALT,tap_time=300, prefer_hold=False)
@@ -184,7 +186,7 @@ KEYMAP_FERRIS = [
     [  # QWERTY
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         XXXXXXX, KC.Q   , KC.W   , KC.E   , KC.R   , KC.T   ,                        KC.Y   , KC.U   , KC.I   , KC.O   , KC.P   , XXXXXXX,
-        XXXXXXX, A_SFT  , S_L6   , D_L2   , F_L3   , KC.G   ,                        KC.H   , J_L4   , K_L1   , L_L5   ,SCLN_SFT, XXXXXXX,
+        XXXXXXX, A_SFT  , S_L6   , D_L2   , F_L3   , G_SFT  ,                        H_SFT  , J_L4   , K_L1   , L_L5   ,SCLN_SFT, XXXXXXX,
         XXXXXXX, KC.Z   , X_CTL  , C_ALT  , KC.V   , KC.B   ,                        KC.N   , KC.M   , COM_ALT, DOT_CTL, KC.SLSH, XXXXXXX,
                           XXXXXXX, XXXXXXX, KC.ESC , I3FG   , ENTER  ,       SPC_L7, KC.BSPC, KC.RGUI, XXXXXXX, XXXXXXX,
     ],

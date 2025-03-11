@@ -159,11 +159,11 @@ keyboard.modules.append(macros)
 
 
 combos = Combos()
-keyboard.modules.append(combos)
 
 combos.combos = [
-    Chord((KC.K, KC.J), KC.ESC, timeout=500, per_key_timeout=False)
+    Chord((KC.J, KC.K), KC.ESC,  per_key_timeout=False)
 ]
+keyboard.modules.append(combos)
 
 import keymap as keymap
 
