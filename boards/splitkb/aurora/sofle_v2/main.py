@@ -168,7 +168,7 @@ import keymap as keymap
 keyboard.keymap= keymap.KEYMAP_FERRIS
 
 combos.combos = [
-    Chord((KC.M, KC.COMM), KC.ESC)
+    Chord((KC.N, KC.M), KC.ESC)
 ]
 
 if __name__ == '__main__':
