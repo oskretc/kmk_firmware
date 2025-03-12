@@ -220,9 +220,9 @@ KEYMAP_FERRIS = [
     ],
     [  # 5 FUNCTION
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, _______, KC.F7  , KC.F8  , KC.F9  , KC.F10 ,                        _______, _______, _______, _______, _______, XXXXXXX,
+        XXXXXXX, _______, KC.F1  , KC.F2  , KC.F3  , KC.F10 ,                        _______, _______, _______, _______, _______, XXXXXXX,
         XXXXXXX, _______, KC.F4  , KC.F5  , KC.F6  , KC.F11 ,                        _______, _______, _______, _______, XXXXXXX, XXXXXXX,
-        XXXXXXX, _______, KC.F1  , KC.F2  , KC.F3  , KC.F12 ,                        _______, _______, _______, _______, _______, XXXXXXX,
+        XXXXXXX, _______, KC.F7  , KC.F8  , KC.F9  , KC.F12 ,                        _______, _______, _______, _______, _______, XXXXXXX,
                           XXXXXXX, XXXXXXX, XXXXXXX, _______, _______,      _______, _______, XXXXXXX, XXXXXXX, XXXXXXX,
     ],
     [  # 6 NUMBERS
@@ -234,7 +234,7 @@ KEYMAP_FERRIS = [
     ],
     [  # 7 ALWAYS AVAILABLE
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, _______, _______, KC.COLN, KC.ESC , _______,                        _______, P2     , _______, M_KEYS , KC.DEL , XXXXXXX,
+        XXXXXXX, _______, _______, KC.COLN, KC.ESC , _______,                        _______, P2     , P1     , M_KEYS , KC.DEL , XXXXXXX,
         XXXXXXX, _______, KC.PERC, KC.SLSH, KC.ENT , KC.MINS,                       KC.DF(1), KC.LGUI, KC.RSFT, M_POINT, P1     , XXXXXXX,
         XXXXXXX, _______, _______, _______, KC.PERC, WTAB   ,                       KC.DF(0), KC.RALT, KC.RCTL, M_SCROL,KC.RESET, XXXXXXX,
                           XXXXXXX, XXXXXXX, XXXXXXX, _______, KC.TAB ,      XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX,
