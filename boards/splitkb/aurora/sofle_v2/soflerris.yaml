@@ -156,7 +156,7 @@ layers:
     # prettier-ignore
     - ["", "", "", "", "", "", "", "", "", "", "", ""]
     - ["", "WS1", "WS2", "WS3", "WS4", "WS5", "WS6", "WS7", "WS8", "WS9", "WS10", ""]
-    - ["RGB+", "", "", "WIN MVLF", "WIN MVRG", "WIN CLOSE", "$$mdi:arrow-left-bold$$", "$$mdi:arrow-down-bold$$", "$$mdi:arrow-up-bold$$", "$$mdi:arrow-right-bold$$", "", ""]
+    - ["RGB+", "WIN CLOSE", "WIN MVLF", "WIN MVLU", "WIN MVRD", "WIN MVRG", "$$mdi:arrow-left-bold$$", "$$mdi:arrow-down-bold$$", "$$mdi:arrow-up-bold$$", "$$mdi:arrow-right-bold$$", "", ""]
     - ["RGB-", "", "", "", "", "", "WS LEFT", "WS RIGHT", "PREV WS", "", "", ""]
     - [
         { t: ▽, type: trans },
