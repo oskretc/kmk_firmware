@@ -202,7 +202,7 @@ KEYMAP_FERRIS = [
         XXXXXXX, FO1    , FO2    , FO3    , FO4    , FO5    ,                        KC.HOME, KC.PGUP, KC.END , _______, _______, XXXXXXX,
         XXXXXXX, _______, _______, XXXXXXX, CSTAB  , CTAB   ,                        KC.LEFT, KC.DOWN, KC.UP  , KC.RGHT, _______, XXXXXXX,
         XXXXXXX, _______, _______, _______, MWSL   , MWSR   ,                        KC.DEL , KC.PGDN, KC.INS , _______, _______, XXXXXXX,
-                          XXXXXXX, XXXXXXX, XXXXXXX,_______, _______,       _______, _______, XXXXXXX, XXXXXXX, XXXXXXX,
+                          XXXXXXX, XXXXXXX, XXXXXXX,_______, _______,       _______, _______, _______, XXXXXXX, XXXXXXX,
     ],
     [  # RIGHT SYMBOLS
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
