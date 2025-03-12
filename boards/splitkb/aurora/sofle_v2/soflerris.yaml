@@ -6,7 +6,7 @@ draw_config:
   split_gap: 10.0
   svg_extra_style: "text.label {stroke-width: 1; font-size: 18px;}"
 combos:
-  - { p: [43, 44], k: Esc, l: [QWERTY] }
+  - { p: [42, 43], k: Esc, l: [QWERTY] }
   - { p: [40, 41], k: Del, l: [QWERTY] }
 layers:
   QWERTY:
