@@ -99,6 +99,7 @@ I3MVD= KC.LGUI(KC.LSFT(KC.DOWN))
 
 LAUNC=KC.LALT(KC.SPC)
 WTAB=KC.LGUI(KC.TAB)
+ATAB=KC.LALT(KC.TAB)
 CTAB=KC.LCTL(KC.TAB)
 CSTAB=KC.LCTL(KC.LSFT(KC.TAB))
 CAHOM=KC.RCTL(KC.RALT(KC.HOME))
@@ -203,7 +204,7 @@ KEYMAP_FERRIS = [
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         XXXXXXX, FO1    , FO2    , FO3    , FO4    , FO5    ,                        KC.HOME, KC.PGUP, KC.END , _______, _______, XXXXXXX,
         XXXXXXX, _______, _______, XXXXXXX, CSTAB  , CTAB   ,                        KC.LEFT, KC.DOWN, KC.UP  , KC.RGHT, _______, XXXXXXX,
-        XXXXXXX, _______, _______, _______, MWSL   , MWSR   ,                        KC.DEL , KC.PGDN, KC.INS , _______, _______, XXXXXXX,
+        XXXXXXX, _______, _______, _______, ATAB   , WTAB   ,                        KC.DEL , KC.PGDN, KC.INS , _______, _______, XXXXXXX,
                           XXXXXXX, XXXXXXX, XXXXXXX,_______, _______,       _______, _______, _______, XXXXXXX, XXXXXXX,
     ],
     [  # RIGHT SYMBOLS
