@@ -15,7 +15,7 @@ layers:
     - ["", Q, W, E, R, T, Y, U, I, O, P, ""]
     - ["", {t: A, h: SFT}, {t: S, h: FUN, type: held}, {t: D, h: NAV, type: held}, {t: F, h: RIGHT, type: held}, {t: G, h: SFT}, {t: G, h: SFT}, {t: J, h: LEFT, type: held}, {t: K, h: MOUSE, type: held}, {t: L, h: NUMBERS, type: held}, {t: ": ;", h: SFT}, ""]
     - ["", Z, {t: X, h: CTL}, {t: C, h: ALT}, V, B,  N, M, {t: "< ,", h: ALT}, {t: "> .", h: CTL}, "? /", ""]
-    - ["", "", "ESC", I3, {t: ENT, h: LCTL}, {t: "$$mdi:keyboard-space$$", h: SYS, type: held}, "$$mdi:backspace$$", "$$mdi:microsoft-windows-classic$$", "", ""]
+    - ["", "", "ESC", {t: TAB, h: I3}, {t: ENT, h: LCTL}, {t: "$$mdi:keyboard-space$$", h: SYS, type: held}, "$$mdi:backspace$$", "$$mdi:microsoft-windows-classic$$", "", ""]
   MOUSE:
     - ["", "", "", "", "", "", "", "", "", "", "", ""]
     - ["", "", "", "M_UP", "MW_UP", "", "", "", "", "", "", ""]

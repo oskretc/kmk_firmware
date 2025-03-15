@@ -162,14 +162,14 @@ KEYMAP = [
 
 
 # Mod-taps
-A_SFT = KC.HT(KC.A, KC.LSFT, tap_time=300, prefer_hold=False)
-SCLN_SFT = KC.HT(KC.SCLN, KC.LSFT,tap_time=300, prefer_hold=False)
-G_SFT = KC.HT(KC.G, KC.LSFT, tap_time=300, prefer_hold=False)
-H_SFT = KC.HT(KC.H, KC.LSFT, tap_time=300, prefer_hold=False)
-X_CTL = KC.HT(KC.X, KC.LCTRL,tap_time=300, prefer_hold=False)
-C_ALT = KC.HT(KC.C, KC.LALT,tap_time=300, prefer_hold=False)
-COM_ALT = KC.HT(KC.COMM, KC.LALT,tap_time=300, prefer_hold=False)
-DOT_CTL = KC.HT(KC.DOT, KC.LCTRL,tap_time=300, prefer_hold=False)
+A_SFT = KC.HT(KC.A, KC.LSFT, tap_time=280, prefer_hold=False)
+SCLN_SFT = KC.HT(KC.SCLN, KC.LSFT,tap_time=280, prefer_hold=False)
+G_SFT = KC.HT(KC.G, KC.LSFT, tap_time=280, prefer_hold=False)
+H_SFT = KC.HT(KC.H, KC.LSFT, tap_time=280, prefer_hold=False)
+X_CTL = KC.HT(KC.X, KC.LCTRL,tap_time=280, prefer_hold=False)
+C_ALT = KC.HT(KC.C, KC.LALT,tap_time=280, prefer_hold=False)
+COM_ALT = KC.HT(KC.COMM, KC.LALT,tap_time=280, prefer_hold=False)
+DOT_CTL = KC.HT(KC.DOT, KC.LCTRL,tap_time=280, prefer_hold=False)
 CTL_ALT = KC.LCTRL(KC.LALT)
 
 
@@ -181,8 +181,8 @@ J_L4 = KC.LT(4, KC.J)
 K_L1 = KC.LT(1, KC.K)
 L_L5 = KC.LT(5, KC.L)
 SPC_L7 = KC.LT(7, KC.SPC)
-# I3FG = KC.LT(8, KC.LGUI)
-I3FG = KC.MO(8)
+I3FG = KC.LT(8, KC.TAB)
+# I3FG = KC.MO(8)
 
 # fmt: off
 KEYMAP_FERRIS = [
