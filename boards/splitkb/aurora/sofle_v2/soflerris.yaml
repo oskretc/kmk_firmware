@@ -3,8 +3,8 @@ draw_config:
   dark_mode: false
   key_w: 60.0
   key_h: 56.0
-  split_gap: 10.0
-  svg_extra_style: "text.label {stroke-width: 1; font-size: 18px;}"
+  split_gap: 01.0
+  svg_extra_style: "text.label {stroke-width: 1; font-size: 18px;} svg.keymap {font-size: 20px;}"
 combos:
   - { p: [42, 43], k: Esc, l: [QWERTY] }
   - { p: [40, 41], k: Del, l: [QWERTY] }
@@ -119,9 +119,9 @@ layers:
   NUMBERS:
     # prettier-ignore
     - ["", "", "", "", "", "", "", "", "", "", "", ""]
-    - ["", "", "", "", "*", "+", "/", "7", "8", "9", "+", ""]
-    - ["", "", { type: held }, "", "", "-", "0", "4", "5", "6", "-", ""]
-    - ["", "", "", "", "", "=", ".", "1", "2", "3", "=", ""]
+    - ["", "", "", "", "*", "+", "0", "1", "2", "3", "+", ""]
+    - ["", "", { type: held }, "", "", "-", "/", "4", "5", "6", "-", ""]
+    - ["", "", "", "", "", "=", ".", "7", "8", "9", "=", ""]
     - [
         "",
         "",
@@ -137,9 +137,9 @@ layers:
   SYS:
     # prettier-ignore
     - ["", "", "", "", "", "", "", "", "", "", "", ""]
-    - ["", "", "", "%", "ESC", "", "", "", "", "TRCK ARROWS", "DEL", ""]
+    - ["", "", "*", ":", "ESC", "=", "", "", "", "TRCK ARROWS", "CSP", ""]
     - ["", "", "%", "/", "ESC", "-", "QWERTY", "WIN", "RSFT", "TRCK POINT", "", ""]
-    - ["", "", "", "", "", "WIN TAB", "MOUSE", "RALT", "RCTL", "TRCK SCROLL", "RESET", ""]
+    - ["", "", "", "~", "CSV", "WIN TAB", "MOUSE", "RALT", "RCTL", "TRCK SCROLL", "RESET", ""]
     - [
         "",
         "",

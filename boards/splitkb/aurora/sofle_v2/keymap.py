@@ -184,6 +184,10 @@ SPC_L7 = KC.LT(7, KC.SPC)
 I3FG = KC.LT(8, KC.TAB)
 # I3FG = KC.MO(8)
 
+CSP = KC.LCTL(KC.LSFT(KC.P))
+CSV = KC.LCTL(KC.LSFT(KC.V))
+
+
 # fmt: off
 KEYMAP_FERRIS = [
     [  # QWERTY
@@ -230,16 +234,16 @@ KEYMAP_FERRIS = [
     ],
     [  # 6 NUMBERS
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, _______, _______, _______, KC.ASTR, KC.PLUS,                        KC.SLSH, KC.N7  , KC.N8  , KC.N9  , KC.PLUS, XXXXXXX,
-        XXXXXXX, _______, XXXXXXX, _______, _______, KC.MINS,                        KC.N0  , KC.N4  , KC.N5  , KC.N6  , KC.MINS, XXXXXXX,
-        XXXXXXX, _______, _______, _______, _______, KC.EQL ,                        KC.DOT , KC.N1  , KC.N2  , KC.N3  , KC.EQL , XXXXXXX,
+        XXXXXXX, _______, _______, _______, KC.ASTR, KC.PLUS,                        KC.N0  , KC.N1  , KC.N2  , KC.N3  , KC.PLUS, XXXXXXX,
+        XXXXXXX, _______, XXXXXXX, _______, _______, KC.MINS,                        KC.SLSH, KC.N4  , KC.N5  , KC.N6  , KC.MINS, XXXXXXX,
+        XXXXXXX, _______, _______, _______, _______, KC.EQL ,                        KC.DOT , KC.N7  , KC.N8  , KC.N9  , KC.EQL , XXXXXXX,
                           XXXXXXX, XXXXXXX, XXXXXXX, _______, _______,      _______, _______, XXXXXXX, XXXXXXX, XXXXXXX,
     ],
     [  # 7 ALWAYS AVAILABLE
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, _______, _______, KC.COLN, KC.ESC , _______,                        _______, P2     , P1     , M_KEYS , KC.DEL , XXXXXXX,
+        XXXXXXX, _______, KC.ASTR, KC.COLN, KC.ESC , KC.EQL ,                        _______, P2     , P1     , M_KEYS , CSP    , XXXXXXX,
         XXXXXXX, _______, KC.PERC, KC.SLSH, KC.ENT , KC.MINS,                       KC.DF(1), KC.LGUI, KC.RSFT, M_POINT, P1     , XXXXXXX,
-        XXXXXXX, _______, _______, _______, KC.PERC, WTAB   ,                       KC.DF(0), KC.RALT, KC.RCTL, M_SCROL,KC.RESET, XXXXXXX,
+        XXXXXXX, _______, _______, KC.TILD, CSV    , WTAB   ,                       KC.DF(0), KC.RALT, KC.RCTL, M_SCROL,KC.RESET, XXXXXXX,
                           XXXXXXX, XXXXXXX, XXXXXXX, _______, KC.TAB ,      XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX,
     ],
     [  # 8 I3
