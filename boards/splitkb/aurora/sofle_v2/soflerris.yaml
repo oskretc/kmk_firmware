@@ -18,20 +18,20 @@ layers:
     - ["", "", "ESC", {t: TAB, h: I3}, {t: ENT, h: LCTL}, {t: "$$mdi:keyboard-space$$", h: SYS, type: held}, "$$mdi:backspace$$", "$$mdi:microsoft-windows-classic$$", "", ""]
   MOUSE:
     - ["", "", "", "", "", "", "", "", "", "", "", ""]
-    - ["", "", "", "M_UP", "MW_UP", "", "", "", "", "", "", ""]
+    - ["", "", "", "UP", "SCRL UP", "", "", "", "", "", "", ""]
     - ""
     - ""
-    - "M_LF"
-    - "M_DN"
-    - "M_RG"
-    - "MB_LB"
-    - "MB_LB"
-    - "MB_LB"
+    - "LEFT"
+    - "DOWN"
+    - "RIGHT"
+    - "LB"
+    - "LB"
+    - "LB"
     - { type: held }
-    - "MB_RB"
+    - "RB"
     - ""
     - ""
-    - ["", "", "", "", "MW_DN", "QWERTY", "", "", "", "", "", ""]
+    - ["", "", "", "", "SCRL DOWN", "QWERTY", "", "", "", "", "", ""]
     - [
         "",
         "",
