@@ -249,7 +249,7 @@ KEYMAP_FERRIS = [
     [  # 8 I3
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         XXXXXXX, FO1    , FO2    , FO3    , FO4    , FO5    ,                        FO6    , FO7    , FO8    , FO9    , FO0    , XXXXXXX,
-        RGB1   , I3CLS  , I3MVL  , I3MVU  , I3MVD  , I3MVR  ,                        FOLFT  , FODN   , FOUP   , FORGH  , _______, XXXXXXX,
+        RGB1   , _______, I3MVL  , I3MVU  , I3MVD  , I3MVR  ,                        FOLFT  , FODN   , FOUP   , FORGH  , _______, XXXXXXX,
         RGB2   , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        MWSL   , MWSR   , SWTDES , XXXXXXX, XXXXXXX, XXXXXXX,
                           XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,      LAUNC, _______, XXXXXXX, XXXXXXX, XXXXXXX,
     ],
